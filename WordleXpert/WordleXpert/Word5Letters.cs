@@ -61,6 +61,18 @@ namespace WordleXpert
             currentWord = txtLetter1.Text + txtLetter2.Text + txtLetter3.Text + txtLetter4.Text + txtLetter5.Text;
         }
 
+        private void CheckAnswer()
+        {
+            if (currentWord == Program.Answer)
+            {
+                wordLen.Text = "!";
+            }
+            else
+            {
+                wordLen.Text = "x";
+            }
+        }
+
         private void txtLetter_KeyPress(object sender, KeyPressEventArgs e)
         {
             // only allow alphabets and backspace
@@ -99,7 +111,25 @@ namespace WordleXpert
 
         private void txtLetter5_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Back)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
 
+                HandleBackspace();
+                GetCurrentWord();
+                HandleLetterFocus();
+            }
+            else if (e.KeyCode == Keys.Enter)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+
+                if (txtLetter5.Text.Length == 0) return;
+
+                GetCurrentWord();
+                CheckAnswer();
+            }
         }
     }
 }
