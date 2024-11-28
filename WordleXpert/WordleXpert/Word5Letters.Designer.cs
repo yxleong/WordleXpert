@@ -45,6 +45,7 @@
             this.txtLetter5.TabIndex = 15;
             this.txtLetter5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLetter5.TextChanged += new System.EventHandler(this.txtLetter_TextChanged);
+            this.txtLetter5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLetter5_KeyDown);
             this.txtLetter5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLetter5_KeyPress);
             // 
             // txtLetter4
@@ -56,6 +57,7 @@
             this.txtLetter4.TabIndex = 14;
             this.txtLetter4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLetter4.TextChanged += new System.EventHandler(this.txtLetter_TextChanged);
+            this.txtLetter4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLetter_KeyDown);
             this.txtLetter4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLetter_KeyPress);
             // 
             // txtLetter3
@@ -67,6 +69,7 @@
             this.txtLetter3.TabIndex = 13;
             this.txtLetter3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLetter3.TextChanged += new System.EventHandler(this.txtLetter_TextChanged);
+            this.txtLetter3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLetter_KeyDown);
             this.txtLetter3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLetter_KeyPress);
             // 
             // txtLetter2
@@ -78,6 +81,7 @@
             this.txtLetter2.TabIndex = 12;
             this.txtLetter2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtLetter2.TextChanged += new System.EventHandler(this.txtLetter_TextChanged);
+            this.txtLetter2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLetter_KeyDown);
             this.txtLetter2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLetter_KeyPress);
             // 
             // txtLetter1

@@ -39,6 +39,24 @@ namespace WordleXpert
             }
         }
 
+        private void HandleBackspace(int letterCount)
+        {
+            letterCount--;
+            switch (letterCount)
+            {
+                case 0: txtLetter1.Text = ""; break;
+                case 1: txtLetter2.Text = ""; break;
+                case 2: txtLetter3.Text = ""; break;
+                case 3: txtLetter4.Text = ""; break;
+                default: txtLetter5.Text = ""; break;
+            }
+        }
+
+        private void GetCurrentWord()
+        {
+            currentWord = txtLetter1.Text + txtLetter2.Text + txtLetter3.Text + txtLetter4.Text + txtLetter5.Text;
+        }
+
         private void txtLetter_KeyPress(object sender, KeyPressEventArgs e)
         {
             // only allow alphabets and backspace
@@ -53,9 +71,31 @@ namespace WordleXpert
 
         private void txtLetter_TextChanged(object sender, EventArgs e)
         {
-            currentWord = txtLetter1.Text + txtLetter2.Text + txtLetter3.Text + txtLetter4.Text + txtLetter5.Text;
+            GetCurrentWord();
             HandleLetterFocus(currentWord.Length);
             wordLen.Text = currentWord.Length.ToString();
+        }
+
+        private void txtLetter_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Back)
+            {
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+
+                //var textbox = sender as System.Windows.Forms.TextBox;
+                //textbox.Text = "";
+
+                //if (currentWord.Length > 0) currentWord = currentWord.Remove(currentWord.Length - 1);
+                HandleBackspace(currentWord.Length);
+                GetCurrentWord();
+                HandleLetterFocus(currentWord.Length);
+            }
+        }
+
+        private void txtLetter5_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
