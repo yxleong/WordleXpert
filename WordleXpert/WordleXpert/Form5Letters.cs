@@ -40,6 +40,11 @@ namespace WordleXpert
             switch (Program.GuessCount)
             {
                 case 0: word1.Select(); break;
+                case 1: word2.Select(); break;
+                case 2: word3.Select(); break;
+                case 3: word4.Select(); break;
+                case 4: word5.Select(); break;
+                case 5: word6.Select(); break;
                 default: break;
             }
         }
