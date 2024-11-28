@@ -18,11 +18,13 @@ namespace WordleXpert
         {
             InitializeComponent();
 
-            HandleLetterFocus(currentWord.Length);
+            HandleLetterFocus();
         }
 
-        private void HandleLetterFocus(int letterCount)
+        private void HandleLetterFocus()
         {
+            int letterCount = currentWord.Length;
+
             txtLetter1.ReadOnly = !(letterCount == 0);
             txtLetter2.ReadOnly = !(letterCount == 1);
             txtLetter3.ReadOnly = !(letterCount == 2);
@@ -39,9 +41,11 @@ namespace WordleXpert
             }
         }
 
-        private void HandleBackspace(int letterCount)
+        private void HandleBackspace()
         {
+            int letterCount = currentWord.Length;
             letterCount--;
+
             switch (letterCount)
             {
                 case 0: txtLetter1.Text = ""; break;
@@ -72,7 +76,7 @@ namespace WordleXpert
         private void txtLetter_TextChanged(object sender, EventArgs e)
         {
             GetCurrentWord();
-            HandleLetterFocus(currentWord.Length);
+            HandleLetterFocus();
             wordLen.Text = currentWord.Length.ToString();
         }
 
@@ -87,9 +91,9 @@ namespace WordleXpert
                 //textbox.Text = "";
 
                 //if (currentWord.Length > 0) currentWord = currentWord.Remove(currentWord.Length - 1);
-                HandleBackspace(currentWord.Length);
+                HandleBackspace();
                 GetCurrentWord();
-                HandleLetterFocus(currentWord.Length);
+                HandleLetterFocus();
             }
         }
 
