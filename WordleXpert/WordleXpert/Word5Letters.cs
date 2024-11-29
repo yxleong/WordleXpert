@@ -13,7 +13,22 @@ namespace WordleXpert
 {
     public partial class Word5Letters : UserControl
     {
-        public string currentWord = "";
+        private string _word = "";
+
+        public string Word
+        {
+            get { return _word; }
+            //set { _word = value; }
+        }
+
+        public event EventHandler WordEntered;
+
+        protected virtual void OnWordEntered(EventArgs e)
+        {
+            UpdateCurrentWord();
+            WordEntered?.Invoke(this, e);
+        }
+
         public Word5Letters()
         {
             InitializeComponent();
@@ -23,7 +38,7 @@ namespace WordleXpert
 
         private void HandleLetterFocus()
         {
-            int letterCount = currentWord.Length;
+            int letterCount = _word.Length;
 
             txtLetter1.ReadOnly = !(letterCount == 0);
             txtLetter2.ReadOnly = !(letterCount == 1);
@@ -43,7 +58,7 @@ namespace WordleXpert
 
         private void HandleBackspace()
         {
-            int letterCount = currentWord.Length;
+            int letterCount = _word.Length;
             letterCount--;
 
             switch (letterCount)
@@ -56,21 +71,9 @@ namespace WordleXpert
             }
         }
 
-        private void GetCurrentWord()
+        private void UpdateCurrentWord()
         {
-            currentWord = txtLetter1.Text + txtLetter2.Text + txtLetter3.Text + txtLetter4.Text + txtLetter5.Text;
-        }
-
-        private void CheckAnswer()
-        {
-            if (currentWord == Program.Answer)
-            {
-                wordLen.Text = "!";
-            }
-            else
-            {
-                wordLen.Text = "x";
-            }
+            _word = txtLetter1.Text + txtLetter2.Text + txtLetter3.Text + txtLetter4.Text + txtLetter5.Text;
         }
 
         private void txtLetter_KeyPress(object sender, KeyPressEventArgs e)
@@ -87,9 +90,8 @@ namespace WordleXpert
 
         private void txtLetter_TextChanged(object sender, EventArgs e)
         {
-            GetCurrentWord();
+            UpdateCurrentWord();
             HandleLetterFocus();
-            wordLen.Text = currentWord.Length.ToString();
         }
 
         private void txtLetter_KeyDown(object sender, KeyEventArgs e)
@@ -99,12 +101,8 @@ namespace WordleXpert
                 e.Handled = true;
                 e.SuppressKeyPress = true;
 
-                //var textbox = sender as System.Windows.Forms.TextBox;
-                //textbox.Text = "";
-
-                //if (currentWord.Length > 0) currentWord = currentWord.Remove(currentWord.Length - 1);
                 HandleBackspace();
-                GetCurrentWord();
+                UpdateCurrentWord();
                 HandleLetterFocus();
             }
         }
@@ -117,7 +115,7 @@ namespace WordleXpert
                 e.SuppressKeyPress = true;
 
                 HandleBackspace();
-                GetCurrentWord();
+                UpdateCurrentWord();
                 HandleLetterFocus();
             }
             else if (e.KeyCode == Keys.Enter)
@@ -127,8 +125,12 @@ namespace WordleXpert
 
                 if (txtLetter5.Text.Length == 0) return;
 
-                GetCurrentWord();
-                CheckAnswer();
+                UpdateCurrentWord();
+                OnWordEntered(EventArgs.Empty);
+            }
+            else if (txtLetter5.Text.Length > 0)
+            {
+                e.SuppressKeyPress = true;
             }
         }
     }

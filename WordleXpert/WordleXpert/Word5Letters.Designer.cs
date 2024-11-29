@@ -33,7 +33,6 @@
             this.txtLetter3 = new System.Windows.Forms.TextBox();
             this.txtLetter2 = new System.Windows.Forms.TextBox();
             this.txtLetter1 = new System.Windows.Forms.TextBox();
-            this.wordLen = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtLetter5
@@ -95,20 +94,10 @@
             this.txtLetter1.TextChanged += new System.EventHandler(this.txtLetter_TextChanged);
             this.txtLetter1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLetter_KeyPress);
             // 
-            // wordLen
-            // 
-            this.wordLen.AutoSize = true;
-            this.wordLen.Location = new System.Drawing.Point(249, 9);
-            this.wordLen.Name = "wordLen";
-            this.wordLen.Size = new System.Drawing.Size(13, 13);
-            this.wordLen.TabIndex = 16;
-            this.wordLen.Text = "_";
-            // 
             // Word5Letters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.wordLen);
             this.Controls.Add(this.txtLetter5);
             this.Controls.Add(this.txtLetter4);
             this.Controls.Add(this.txtLetter3);
@@ -128,6 +117,5 @@
         private System.Windows.Forms.TextBox txtLetter3;
         private System.Windows.Forms.TextBox txtLetter2;
         private System.Windows.Forms.TextBox txtLetter1;
-        private System.Windows.Forms.Label wordLen;
     }
 }
