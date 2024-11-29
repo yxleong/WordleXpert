@@ -16,5 +16,15 @@ namespace WordleXpert
         {
             InitializeComponent();
         }
+
+        private void FormLose_Load(object sender, EventArgs e)
+        {
+            lblAnswer.Text += Program.Answer;
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
