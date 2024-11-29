@@ -58,11 +58,23 @@
     <Compile Include="Form5Letters.Designer.cs">
       <DependentUpon>Form5Letters.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLose.Designer.cs">
+      <DependentUpon>FormLose.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormStartMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormStartMenu.Designer.cs">
       <DependentUpon>FormStartMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWin.Designer.cs">
+      <DependentUpon>FormWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,8 +90,14 @@
     <EmbeddedResource Include="Form5Letters.resx">
       <DependentUpon>Form5Letters.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLose.resx">
+      <DependentUpon>FormLose.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormStartMenu.resx">
       <DependentUpon>FormStartMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWin.resx">
+      <DependentUpon>FormWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

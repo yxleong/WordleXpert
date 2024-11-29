@@ -55,12 +55,39 @@ namespace WordleXpert
 
             if (word.Word == Program.Answer)
             {
-                txtAnswer.Text = "WIN! " + Program.GuessCount.ToString();
+                using (var formWin = new FormWin())
+                {
+                    formWin.StartPosition = FormStartPosition.CenterParent;
+                    formWin.FormClosing += delegate { this.Close(); };
+                    formWin.ShowDialog();
+                }
             }
             else
             {
                 Program.GuessCount++;
                 HandleWordFocus();
+            }
+        }
+
+        private void word5_WordEntered(object sender, EventArgs e)
+        {
+            if (word5.Word == Program.Answer)
+            {
+                using (var formWin = new FormWin())
+                {
+                    formWin.StartPosition = FormStartPosition.CenterParent;
+                    formWin.FormClosing += delegate { this.Close(); };
+                    formWin.ShowDialog();
+                }
+            }
+            else
+            {
+                using (var formLose = new FormLose())
+                {
+                    formLose.StartPosition = FormStartPosition.CenterParent;
+                    formLose.FormClosing += delegate { this.Close(); };
+                    formLose.ShowDialog();
+                }
             }
         }
     }
