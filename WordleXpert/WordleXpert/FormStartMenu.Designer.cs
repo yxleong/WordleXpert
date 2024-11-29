@@ -30,6 +30,7 @@
         {
             this.labelTitle = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -53,11 +54,23 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
+            // btnSettings
+            // 
+            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnSettings.Location = new System.Drawing.Point(320, 317);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(158, 61);
+            this.btnSettings.TabIndex = 2;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // FormStartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.labelTitle);
             this.Name = "FormStartMenu";
@@ -71,5 +84,6 @@
 
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnSettings;
     }
 }

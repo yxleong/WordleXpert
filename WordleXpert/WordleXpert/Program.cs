@@ -8,7 +8,9 @@ namespace WordleXpert
 {
     internal static class Program
     {
+        public static string Language = "English";
         public static int WordLength = 5;
+
         public static int GuessCount = 0;
         public static string Answer;
 

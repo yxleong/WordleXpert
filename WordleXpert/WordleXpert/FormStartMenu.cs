@@ -26,5 +26,14 @@ namespace WordleXpert
             formGame.Show();
             this.Hide();
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            using (var formSettings = new FormSettings())
+            {
+                formSettings.StartPosition = FormStartPosition.CenterParent;
+                formSettings.ShowDialog();
+            }
+        }
     }
 }
