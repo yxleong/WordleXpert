@@ -50,6 +50,7 @@
             this.word1.Name = "word1";
             this.word1.Size = new System.Drawing.Size(270, 38);
             this.word1.TabIndex = 32;
+            this.word1.WordEntered += new System.EventHandler(this.word_WordEntered);
             // 
             // word2
             // 
@@ -57,6 +58,7 @@
             this.word2.Name = "word2";
             this.word2.Size = new System.Drawing.Size(270, 38);
             this.word2.TabIndex = 33;
+            this.word2.WordEntered += new System.EventHandler(this.word_WordEntered);
             // 
             // word3
             // 
@@ -64,6 +66,7 @@
             this.word3.Name = "word3";
             this.word3.Size = new System.Drawing.Size(270, 38);
             this.word3.TabIndex = 34;
+            this.word3.WordEntered += new System.EventHandler(this.word_WordEntered);
             // 
             // word4
             // 
@@ -71,6 +74,7 @@
             this.word4.Name = "word4";
             this.word4.Size = new System.Drawing.Size(270, 38);
             this.word4.TabIndex = 35;
+            this.word4.WordEntered += new System.EventHandler(this.word_WordEntered);
             // 
             // word5
             // 
@@ -78,6 +82,7 @@
             this.word5.Name = "word5";
             this.word5.Size = new System.Drawing.Size(270, 38);
             this.word5.TabIndex = 36;
+            this.word5.WordEntered += new System.EventHandler(this.word_WordEntered);
             // 
             // word6
             // 
@@ -85,6 +90,7 @@
             this.word6.Name = "word6";
             this.word6.Size = new System.Drawing.Size(270, 38);
             this.word6.TabIndex = 37;
+            this.word6.WordEntered += new System.EventHandler(this.word_WordEntered);
             // 
             // Form5Letters
             // 
