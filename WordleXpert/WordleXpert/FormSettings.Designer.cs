@@ -90,6 +90,7 @@
             // 
             // cboLanguage
             // 
+            this.cboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLanguage.FormattingEnabled = true;
             this.cboLanguage.Items.AddRange(new object[] {
             "English"});
@@ -101,6 +102,7 @@
             // 
             // cboWordLength
             // 
+            this.cboWordLength.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboWordLength.FormattingEnabled = true;
             this.cboWordLength.Items.AddRange(new object[] {
             "5",
