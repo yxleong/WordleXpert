@@ -37,9 +37,11 @@
             // 
             // txtLetter5
             // 
+            this.txtLetter5.Enabled = false;
             this.txtLetter5.Location = new System.Drawing.Point(218, 9);
             this.txtLetter5.MaxLength = 1;
             this.txtLetter5.Name = "txtLetter5";
+            this.txtLetter5.ReadOnly = true;
             this.txtLetter5.Size = new System.Drawing.Size(24, 20);
             this.txtLetter5.TabIndex = 15;
             this.txtLetter5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -49,9 +51,11 @@
             // 
             // txtLetter4
             // 
+            this.txtLetter4.Enabled = false;
             this.txtLetter4.Location = new System.Drawing.Point(172, 9);
             this.txtLetter4.MaxLength = 1;
             this.txtLetter4.Name = "txtLetter4";
+            this.txtLetter4.ReadOnly = true;
             this.txtLetter4.Size = new System.Drawing.Size(24, 20);
             this.txtLetter4.TabIndex = 14;
             this.txtLetter4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -61,9 +65,11 @@
             // 
             // txtLetter3
             // 
+            this.txtLetter3.Enabled = false;
             this.txtLetter3.Location = new System.Drawing.Point(122, 9);
             this.txtLetter3.MaxLength = 1;
             this.txtLetter3.Name = "txtLetter3";
+            this.txtLetter3.ReadOnly = true;
             this.txtLetter3.Size = new System.Drawing.Size(24, 20);
             this.txtLetter3.TabIndex = 13;
             this.txtLetter3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -73,9 +79,11 @@
             // 
             // txtLetter2
             // 
+            this.txtLetter2.Enabled = false;
             this.txtLetter2.Location = new System.Drawing.Point(74, 9);
             this.txtLetter2.MaxLength = 1;
             this.txtLetter2.Name = "txtLetter2";
+            this.txtLetter2.ReadOnly = true;
             this.txtLetter2.Size = new System.Drawing.Size(24, 20);
             this.txtLetter2.TabIndex = 12;
             this.txtLetter2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -85,9 +93,11 @@
             // 
             // txtLetter1
             // 
+            this.txtLetter1.Enabled = false;
             this.txtLetter1.Location = new System.Drawing.Point(28, 9);
             this.txtLetter1.MaxLength = 1;
             this.txtLetter1.Name = "txtLetter1";
+            this.txtLetter1.ReadOnly = true;
             this.txtLetter1.Size = new System.Drawing.Size(24, 20);
             this.txtLetter1.TabIndex = 11;
             this.txtLetter1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

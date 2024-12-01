@@ -39,13 +39,13 @@ namespace WordleXpert
         {
             switch (Program.GuessCount)
             {
-                case 0: word1.Select(); word1.Focus(); break;
-                case 1: word2.Select(); word2.Focus(); break;
-                case 2: word3.Select(); word3.Focus(); break;
-                case 3: word4.Select(); word4.Focus(); break;
-                case 4: word5.Select(); word5.Focus(); break;
+                case 0: word1.Select(); word1.Focus(); word1.HandleLetterFocus(); break;
+                case 1: word2.Select(); word2.Focus(); word2.HandleLetterFocus(); break;
+                case 2: word3.Select(); word3.Focus(); word3.HandleLetterFocus(); break;
+                case 3: word4.Select(); word4.Focus(); word4.HandleLetterFocus(); break;
+                case 4: word5.Select(); word5.Focus(); word5.HandleLetterFocus(); break;
                 case 5:
-                default: word6.Select(); word6.Focus(); break;
+                default: word6.Select(); word6.Focus(); word6.HandleLetterFocus(); break;
             }
         }
 

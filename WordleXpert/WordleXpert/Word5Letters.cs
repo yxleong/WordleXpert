@@ -33,10 +33,10 @@ namespace WordleXpert
         {
             InitializeComponent();
 
-            HandleLetterFocus();
+            //HandleLetterFocus();
         }
 
-        private void HandleLetterFocus()
+        public void HandleLetterFocus()
         {
             int letterCount = _word.Length;
 
@@ -45,6 +45,12 @@ namespace WordleXpert
             txtLetter3.ReadOnly = !(letterCount == 2);
             txtLetter4.ReadOnly = !(letterCount == 3);
             txtLetter5.ReadOnly = !(letterCount >= 4);
+
+            txtLetter1.Enabled = (letterCount == 0);
+            txtLetter2.Enabled = (letterCount == 1);
+            txtLetter3.Enabled = (letterCount == 2);
+            txtLetter4.Enabled = (letterCount == 3);
+            txtLetter5.Enabled = (letterCount >= 4);
 
             switch (letterCount)
             {
