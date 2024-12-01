@@ -93,7 +93,8 @@
             this.cboLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLanguage.FormattingEnabled = true;
             this.cboLanguage.Items.AddRange(new object[] {
-            "English"});
+            "English",
+            "Melayu"});
             this.cboLanguage.Location = new System.Drawing.Point(358, 36);
             this.cboLanguage.Name = "cboLanguage";
             this.cboLanguage.Size = new System.Drawing.Size(121, 21);

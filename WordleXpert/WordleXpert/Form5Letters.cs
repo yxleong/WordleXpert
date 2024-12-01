@@ -24,7 +24,9 @@ namespace WordleXpert
             // get a random word as the answer
             Random random = new Random((int)DateTime.Now.Millisecond);
 
-            string filename = "5-letter-words.txt";
+            string filename = "english_5.txt";
+            if (Program.Language == "Melayu") filename = "melayu_5.txt";
+
             string[] lines = File.ReadAllLines(filename);
 
             Program.Answer = lines[random.Next(lines.Length)];
