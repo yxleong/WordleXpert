@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form5Letters.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,9 +126,6 @@
     <Compile Include="Word8Letters.Designer.cs">
       <DependentUpon>Word8Letters.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form5Letters.resx">
       <DependentUpon>Form5Letters.cs</DependentUpon>
     </EmbeddedResource>

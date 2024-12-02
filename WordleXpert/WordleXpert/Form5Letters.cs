@@ -92,7 +92,7 @@ namespace WordleXpert
             }
             else
             {
-                using (var formLose = new FormLose())
+                using (var formLose = new FormLose(Answer))
                 {
                     formLose.StartPosition = FormStartPosition.CenterParent;
                     formLose.FormClosing += delegate { this.Close(); };

@@ -12,14 +12,17 @@ namespace WordleXpert
 {
     public partial class FormLose : Form
     {
-        public FormLose()
+        private static string Answer;
+        public FormLose(string answer)
         {
             InitializeComponent();
+
+            Answer = answer;
         }
 
         private void FormLose_Load(object sender, EventArgs e)
         {
-            lblAnswer.Text += Program.Answer;
+            lblAnswer.Text += Answer;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
