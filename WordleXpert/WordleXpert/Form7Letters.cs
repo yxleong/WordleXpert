@@ -13,6 +13,9 @@ namespace WordleXpert
 {
     public partial class Form7Letters : Form
     {
+        private static string Answer;
+        private static int GuessCount;
+
         public Form7Letters()
         {
             InitializeComponent();
@@ -30,17 +33,17 @@ namespace WordleXpert
 
             string[] lines = File.ReadAllLines(filename);
 
-            Program.Answer = lines[random.Next(lines.Length)];
-            txtAnswer.Text = Program.Answer.ToString();
+            Answer = lines[random.Next(lines.Length)];
+            txtAnswer.Text = Answer;
 
             // focus to first textbox
-            Program.GuessCount = 0;
+            GuessCount = 0;
             HandleWordFocus();
         }
 
         private void HandleWordFocus()
         {
-            switch (Program.GuessCount)
+            switch (GuessCount)
             {
                 case 0: word1.Select(); word1.Focus(); word1.HandleLetterFocus(); break;
                 case 1: word2.Select(); word2.Focus(); word2.HandleLetterFocus(); break;
@@ -55,7 +58,7 @@ namespace WordleXpert
         {
             var word = sender as Word7Letters;
 
-            if (word.Word == Program.Answer)
+            if (word.Word == Answer)
             {
                 using (var formWin = new FormWin())
                 {
@@ -66,7 +69,7 @@ namespace WordleXpert
             }
             else
             {
-                Program.GuessCount++;
+                GuessCount++;
                 HandleWordFocus();
             }
         }
@@ -75,7 +78,7 @@ namespace WordleXpert
         {
             Program.IsInGame = false;
 
-            if (word6.Word == Program.Answer)
+            if (word6.Word == Answer)
             {
                 Program.IsInGame = false;
 

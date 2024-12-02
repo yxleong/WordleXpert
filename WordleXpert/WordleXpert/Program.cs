@@ -12,9 +12,6 @@ namespace WordleXpert
         public static int WordLength = 5;
         public static bool IsInGame = false;
 
-        public static int GuessCount = 0;
-        public static string Answer;
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
