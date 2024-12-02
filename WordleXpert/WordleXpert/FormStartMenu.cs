@@ -23,6 +23,7 @@ namespace WordleXpert
 
             if (Program.WordLength == 6) formGame = new Form6Letters();
             else if (Program.WordLength == 7) formGame = new Form7Letters();
+            else if (Program.WordLength == 8) formGame = new Form8Letters();
             else formGame = new Form5Letters();
 
             formGame.Location = this.Location;

@@ -70,6 +70,12 @@
     <Compile Include="Form7Letters.Designer.cs">
       <DependentUpon>Form7Letters.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form8Letters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8Letters.Designer.cs">
+      <DependentUpon>Form8Letters.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormConfirmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     <Compile Include="Word7Letters.Designer.cs">
       <DependentUpon>Word7Letters.cs</DependentUpon>
     </Compile>
+    <Compile Include="Word8Letters.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Word8Letters.Designer.cs">
+      <DependentUpon>Word8Letters.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -131,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form7Letters.resx">
       <DependentUpon>Form7Letters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8Letters.resx">
+      <DependentUpon>Form8Letters.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormConfirmSettings.resx">
       <DependentUpon>FormConfirmSettings.cs</DependentUpon>
@@ -164,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Word7Letters.resx">
       <DependentUpon>Word7Letters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Word8Letters.resx">
+      <DependentUpon>Word8Letters.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
