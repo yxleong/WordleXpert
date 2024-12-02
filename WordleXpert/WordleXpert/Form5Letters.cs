@@ -17,6 +17,8 @@ namespace WordleXpert
         public Form5Letters()
         {
             InitializeComponent();
+            
+            Program.IsInGame = true;
         }
 
         private void Form5Letters_Load(object sender, EventArgs e)
@@ -89,6 +91,23 @@ namespace WordleXpert
                     formLose.StartPosition = FormStartPosition.CenterParent;
                     formLose.FormClosing += delegate { this.Close(); };
                     formLose.ShowDialog();
+                }
+            }
+
+            Program.IsInGame = false;
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            using (var formSettings = new FormSettings())
+            {
+                formSettings.StartPosition = FormStartPosition.CenterParent;
+                var result = formSettings.ShowDialog();
+
+                if (result == DialogResult.Yes)
+                {
+                    Program.IsInGame = false;
+                    this.Close();
                 }
             }
         }

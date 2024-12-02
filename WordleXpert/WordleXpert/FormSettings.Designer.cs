@@ -36,6 +36,8 @@
             this.cboLanguage = new System.Windows.Forms.ComboBox();
             this.cboWordLength = new System.Windows.Forms.ComboBox();
             this.txtTest = new System.Windows.Forms.TextBox();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLanguage
@@ -123,11 +125,33 @@
             this.txtTest.Size = new System.Drawing.Size(389, 20);
             this.txtTest.TabIndex = 7;
             // 
+            // btnConfirm
+            // 
+            this.btnConfirm.Location = new System.Drawing.Point(100, 335);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(116, 23);
+            this.btnConfirm.TabIndex = 8;
+            this.btnConfirm.Text = "Confirm Changes";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(285, 335);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(116, 23);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // FormSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 321);
+            this.ClientSize = new System.Drawing.Size(504, 375);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtTest);
             this.Controls.Add(this.cboWordLength);
             this.Controls.Add(this.cboLanguage);
@@ -154,5 +178,7 @@
         private System.Windows.Forms.ComboBox cboLanguage;
         private System.Windows.Forms.ComboBox cboWordLength;
         private System.Windows.Forms.TextBox txtTest;
+        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

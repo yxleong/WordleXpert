@@ -35,6 +35,7 @@
             this.word4 = new WordleXpert.Word5Letters();
             this.word5 = new WordleXpert.Word5Letters();
             this.word6 = new WordleXpert.Word5Letters();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtAnswer
@@ -92,11 +93,22 @@
             this.word6.TabIndex = 37;
             this.word6.WordEntered += new System.EventHandler(this.word5_WordEntered);
             // 
+            // btnSettings
+            // 
+            this.btnSettings.Location = new System.Drawing.Point(13, 13);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(75, 23);
+            this.btnSettings.TabIndex = 38;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // Form5Letters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.word6);
             this.Controls.Add(this.word5);
             this.Controls.Add(this.word4);
@@ -121,5 +133,6 @@
         private Word5Letters word4;
         private Word5Letters word5;
         private Word5Letters word6;
+        private System.Windows.Forms.Button btnSettings;
     }
 }

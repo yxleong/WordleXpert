@@ -33,7 +33,11 @@ namespace WordleXpert
         {
             InitializeComponent();
 
-            //HandleLetterFocus();
+            txtLetter1.BackColor = Color.White;
+            txtLetter2.BackColor = Color.White;
+            txtLetter3.BackColor = Color.White;
+            txtLetter4.BackColor = Color.White;
+            txtLetter5.BackColor = Color.White;
         }
 
         public void HandleLetterFocus()

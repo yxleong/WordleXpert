@@ -10,6 +10,7 @@ namespace WordleXpert
     {
         public static string Language = "English";
         public static int WordLength = 5;
+        public static bool IsInGame = false;
 
         public static int GuessCount = 0;
         public static string Answer;

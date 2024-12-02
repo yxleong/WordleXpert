@@ -58,6 +58,12 @@
     <Compile Include="Form5Letters.Designer.cs">
       <DependentUpon>Form5Letters.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormConfirmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfirmSettings.Designer.cs">
+      <DependentUpon>FormConfirmSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form5Letters.resx">
       <DependentUpon>Form5Letters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfirmSettings.resx">
+      <DependentUpon>FormConfirmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLose.resx">
       <DependentUpon>FormLose.cs</DependentUpon>
