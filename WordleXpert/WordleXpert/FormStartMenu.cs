@@ -19,7 +19,11 @@ namespace WordleXpert
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            Form formGame = new Form5Letters();
+            Form formGame;
+
+            if (Program.WordLength == 5) formGame = new Form5Letters();
+            else formGame = new Form6Letters();
+
             formGame.Location = this.Location;
             formGame.StartPosition = FormStartPosition.Manual;
             formGame.FormClosing += delegate { this.Show(); };

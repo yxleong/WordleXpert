@@ -133,12 +133,12 @@ namespace WordleXpert
                 e.Handled = true;
                 e.SuppressKeyPress = true;
 
-                if (txtLetter5.Text.Length == 0) return;
+                if (txtLetter6.Text.Length == 0) return;
 
                 UpdateCurrentWord();
                 OnWordEntered(EventArgs.Empty);
             }
-            else if (txtLetter5.Text.Length > 0)
+            else if (txtLetter6.Text.Length > 0)
             {
                 e.SuppressKeyPress = true;
             }
