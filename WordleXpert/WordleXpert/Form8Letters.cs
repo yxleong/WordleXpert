@@ -57,6 +57,8 @@ namespace WordleXpert
 
             if (word.Word == Program.Answer)
             {
+                Program.IsInGame = false;
+
                 using (var formWin = new FormWin())
                 {
                     formWin.StartPosition = FormStartPosition.CenterParent;
