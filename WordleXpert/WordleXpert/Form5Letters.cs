@@ -48,7 +48,6 @@ namespace WordleXpert
                 case 2: word3.Select(); word3.Focus(); word3.HandleLetterFocus(); break;
                 case 3: word4.Select(); word4.Focus(); word4.HandleLetterFocus(); break;
                 case 4: word5.Select(); word5.Focus(); word5.HandleLetterFocus(); break;
-                case 5:
                 default: word6.Select(); word6.Focus(); word6.HandleLetterFocus(); break;
             }
         }
@@ -75,6 +74,8 @@ namespace WordleXpert
 
         private void word5_WordEntered(object sender, EventArgs e)
         {
+            Program.IsInGame = false;
+
             if (word5.Word == Program.Answer)
             {
                 using (var formWin = new FormWin())
@@ -93,8 +94,6 @@ namespace WordleXpert
                     formLose.ShowDialog();
                 }
             }
-
-            Program.IsInGame = false;
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
