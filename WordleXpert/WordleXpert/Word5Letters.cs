@@ -14,12 +14,10 @@ namespace WordleXpert
     public partial class Word5Letters : UserControl
     {
         private string _word = "";
+        private System.Windows.Forms.TextBox[] tbArray;
+        private Dictionary<char, int> lettersDict = new Dictionary<char, int>();
 
-        public string Word
-        {
-            get { return _word; }
-            //set { _word = value; }
-        }
+        public string Word { get { return _word; } }
 
         public event EventHandler WordEntered;
 
@@ -33,28 +31,29 @@ namespace WordleXpert
         {
             InitializeComponent();
 
-            txtLetter1.BackColor = Color.White;
-            txtLetter2.BackColor = Color.White;
-            txtLetter3.BackColor = Color.White;
-            txtLetter4.BackColor = Color.White;
-            txtLetter5.BackColor = Color.White;
+            tbArray = new System.Windows.Forms.TextBox[] { txtLetter1, txtLetter2, txtLetter3, txtLetter4, txtLetter5 };
+
+            for (int i = 0; i < tbArray.Length; i++)
+            {
+                tbArray[i].BackColor = Color.White;
+            }
         }
 
         public void HandleLetterFocus()
         {
             int letterCount = _word.Length;
 
-            txtLetter1.ReadOnly = !(letterCount == 0);
-            txtLetter2.ReadOnly = !(letterCount == 1);
-            txtLetter3.ReadOnly = !(letterCount == 2);
-            txtLetter4.ReadOnly = !(letterCount == 3);
-            txtLetter5.ReadOnly = !(letterCount >= 4);
-
-            txtLetter1.Enabled = (letterCount == 0);
-            txtLetter2.Enabled = (letterCount == 1);
-            txtLetter3.Enabled = (letterCount == 2);
-            txtLetter4.Enabled = (letterCount == 3);
-            txtLetter5.Enabled = (letterCount >= 4);
+            for (int i = 0;  i < tbArray.Length; i++)
+            {
+                if (i == tbArray.Length - 1)
+                {
+                    tbArray[i].ReadOnly = !(letterCount >= i);
+                    tbArray[i].Enabled = (letterCount >= i);
+                    continue;
+                }
+                tbArray[i].ReadOnly = !(letterCount == i);
+                tbArray[i].Enabled = (letterCount == i);
+            }
 
             switch (letterCount)
             {
@@ -142,6 +141,42 @@ namespace WordleXpert
             {
                 e.SuppressKeyPress = true;
             }
+        }
+
+        private void CheckCorrectLetters(string answer)
+        {
+            for (int i = 0; i < tbArray.Length; i++)
+            {
+                if (tbArray[i].Text[0] == answer[i] && lettersDict[tbArray[i].Text[0]] > 0)
+                {
+                    tbArray[i].BackColor = Color.LimeGreen;
+                    lettersDict[tbArray[i].Text[0]]--;
+                }
+            }
+        }
+
+        private void CheckExistingLetters(string answer)
+        {
+            for (int i = 0; i < tbArray.Length; i++)
+            {
+                if (answer.Contains(tbArray[i].Text[0]) && lettersDict[tbArray[i].Text[0]] > 0)
+                {
+                    tbArray[i].BackColor = Color.Yellow;
+                    lettersDict[tbArray[i].Text[0]]--;
+                }
+            }
+        }
+
+        public void CheckLetters(string answer)
+        {
+            foreach (char letter in answer)
+            {
+                if (!lettersDict.ContainsKey(letter)) lettersDict.Add(letter, 1);
+                else lettersDict[letter] += 1;
+            }
+
+            CheckCorrectLetters(answer);
+            CheckExistingLetters(answer);
         }
     }
 }

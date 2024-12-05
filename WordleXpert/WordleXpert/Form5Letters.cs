@@ -60,6 +60,7 @@ namespace WordleXpert
         private void word_WordEntered(object sender, EventArgs e)
         {
             var word = sender as Word5Letters;
+            word.CheckLetters(Answer);
 
             if (word.Word == Answer)
             {
@@ -67,8 +68,6 @@ namespace WordleXpert
             }
             else
             {
-                // handle display of correct/incorrect letters
-
                 GuessCount++;
                 HandleWordFocus();
             }
@@ -76,7 +75,8 @@ namespace WordleXpert
 
         private void word6_WordEntered(object sender, EventArgs e)
         {
-            if (word5.Word == Answer)
+            word6.CheckLetters(Answer);
+
             if (word6.Word == Answer)
             {
                 GameFunctions.DisplayWin();
