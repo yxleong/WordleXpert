@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WordleXpert
 {
@@ -44,10 +45,19 @@ namespace WordleXpert
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            using (var formAccount = new FormAccount())
+            if(btnAccount.Text == "Account")
             {
-                formAccount.StartPosition = FormStartPosition.CenterParent;
-                formAccount.ShowDialog();
+                using (var formAccount = new FormAccount())
+                {
+                    formAccount.StartPosition = FormStartPosition.CenterParent;
+                    formAccount.ShowDialog();
+                }
+                btnAccount.Text = "logout";
+            }
+            else if(btnAccount.Text == "logout")
+            {
+                btnAccount.Text = "Account";
+                Program.User = "Guest";
             }
         }
     }
