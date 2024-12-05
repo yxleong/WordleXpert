@@ -19,7 +19,7 @@ namespace WordleXpert
 
         public Form5Letters()
         {
-            lblUser = Program.IsInGame ? Program.User : "Guest";
+            //lblUser = Program.IsInGame ? Program.User : "Guest";
             InitializeComponent();
             Program.IsInGame = true;
         }
