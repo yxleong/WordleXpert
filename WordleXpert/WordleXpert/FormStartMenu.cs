@@ -41,5 +41,14 @@ namespace WordleXpert
                 formSettings.ShowDialog();
             }
         }
+
+        private void btnAccount_Click(object sender, EventArgs e)
+        {
+            using (var formAccount = new FormAccount())
+            {
+                formAccount.StartPosition = FormStartPosition.CenterParent;
+                formAccount.ShowDialog();
+            }
+        }
     }
 }

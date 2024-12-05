@@ -31,6 +31,7 @@
             this.labelTitle = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.btnAccount = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -65,11 +66,23 @@
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
+            // btnAccount
+            // 
+            this.btnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnAccount.Location = new System.Drawing.Point(548, 264);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(158, 61);
+            this.btnAccount.TabIndex = 3;
+            this.btnAccount.Text = "Account";
+            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
+            // 
             // FormStartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAccount);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.labelTitle);
@@ -85,5 +98,6 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Button btnAccount;
     }
 }

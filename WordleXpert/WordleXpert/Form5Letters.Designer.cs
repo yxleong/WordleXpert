@@ -36,6 +36,7 @@
             this.word3 = new WordleXpert.Word5Letters();
             this.word2 = new WordleXpert.Word5Letters();
             this.word1 = new WordleXpert.Word5Letters();
+            this.lblUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtAnswer
@@ -103,11 +104,20 @@
             this.word1.TabIndex = 32;
             this.word1.WordEntered += new System.EventHandler(this.word_WordEntered);
             // 
+            // lblUser
+            // 
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblUser.Location = new System.Drawing.Point(655, 28);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(116, 40);
+            this.lblUser.TabIndex = 39;
+            // 
             // Form5Letters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.word6);
             this.Controls.Add(this.word5);
@@ -134,5 +144,6 @@
         private Word5Letters word5;
         private Word5Letters word6;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Label lblUser;
     }
 }

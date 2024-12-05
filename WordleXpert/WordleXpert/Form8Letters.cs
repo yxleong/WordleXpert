@@ -25,6 +25,7 @@ namespace WordleXpert
 
         private void Form8Letters_Load(object sender, EventArgs e)
         {
+            lblUser.Text = Program.User;
             // get a random word as the answer
             Random random = new Random((int)DateTime.Now.Millisecond);
 
@@ -110,6 +111,7 @@ namespace WordleXpert
                 if (result == DialogResult.Yes)
                 {
                     Program.IsInGame = false;
+                    Program.User = "Guest";
                     this.Close();
                 }
             }
