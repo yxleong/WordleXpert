@@ -21,6 +21,7 @@ namespace WordleXpert
             InitializeComponent();
 
             Program.IsInGame = true;
+            lblUser.Text = Program.User;
         }
 
         private void Form6Letters_Load(object sender, EventArgs e)
@@ -111,10 +112,14 @@ namespace WordleXpert
                 if (result == DialogResult.Yes)
                 {
                     Program.IsInGame = false;
-                    Program.User = "Guest";
                     this.Close();
                 }
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Program.User = "Guest";
         }
     }
 }

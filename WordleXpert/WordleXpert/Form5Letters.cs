@@ -19,9 +19,9 @@ namespace WordleXpert
 
         public Form5Letters()
         {
-            //lblUser = Program.IsInGame ? Program.User : "Guest";
             InitializeComponent();
             Program.IsInGame = true;
+            lblUser.Text = Program.User;
         }
 
         private void Form5Letters_Load(object sender, EventArgs e)
@@ -114,6 +114,12 @@ namespace WordleXpert
                     this.Close();
                 }
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Program.User = "Guest";
+            this.Close();
         }
     }
 }

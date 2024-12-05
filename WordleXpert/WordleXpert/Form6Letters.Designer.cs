@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.txtAnswer = new System.Windows.Forms.TextBox();
-            this.word1 = new WordleXpert.Word6Letters();
-            this.word2 = new WordleXpert.Word6Letters();
-            this.word3 = new WordleXpert.Word6Letters();
-            this.word4 = new WordleXpert.Word6Letters();
-            this.word5 = new WordleXpert.Word6Letters();
-            this.word6 = new WordleXpert.Word6Letters();
             this.btnSettings = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.word6 = new WordleXpert.Word6Letters();
+            this.word5 = new WordleXpert.Word6Letters();
+            this.word4 = new WordleXpert.Word6Letters();
+            this.word3 = new WordleXpert.Word6Letters();
+            this.word2 = new WordleXpert.Word6Letters();
+            this.word1 = new WordleXpert.Word6Letters();
             this.SuspendLayout();
             // 
             // txtAnswer
@@ -45,54 +46,6 @@
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.Size = new System.Drawing.Size(100, 20);
             this.txtAnswer.TabIndex = 1;
-            // 
-            // word1
-            // 
-            this.word1.Location = new System.Drawing.Point(240, 30);
-            this.word1.Name = "word1";
-            this.word1.Size = new System.Drawing.Size(321, 38);
-            this.word1.TabIndex = 2;
-            this.word1.WordEntered += new System.EventHandler(this.word_WordEntered);
-            // 
-            // word2
-            // 
-            this.word2.Location = new System.Drawing.Point(240, 74);
-            this.word2.Name = "word2";
-            this.word2.Size = new System.Drawing.Size(321, 38);
-            this.word2.TabIndex = 3;
-            this.word2.WordEntered += new System.EventHandler(this.word_WordEntered);
-            // 
-            // word3
-            // 
-            this.word3.Location = new System.Drawing.Point(240, 118);
-            this.word3.Name = "word3";
-            this.word3.Size = new System.Drawing.Size(321, 38);
-            this.word3.TabIndex = 4;
-            this.word3.WordEntered += new System.EventHandler(this.word_WordEntered);
-            // 
-            // word4
-            // 
-            this.word4.Location = new System.Drawing.Point(240, 162);
-            this.word4.Name = "word4";
-            this.word4.Size = new System.Drawing.Size(321, 38);
-            this.word4.TabIndex = 5;
-            this.word4.WordEntered += new System.EventHandler(this.word_WordEntered);
-            // 
-            // word5
-            // 
-            this.word5.Location = new System.Drawing.Point(240, 206);
-            this.word5.Name = "word5";
-            this.word5.Size = new System.Drawing.Size(321, 38);
-            this.word5.TabIndex = 6;
-            this.word5.WordEntered += new System.EventHandler(this.word_WordEntered);
-            // 
-            // word6
-            // 
-            this.word6.Location = new System.Drawing.Point(240, 250);
-            this.word6.Name = "word6";
-            this.word6.Size = new System.Drawing.Size(321, 38);
-            this.word6.TabIndex = 7;
-            this.word6.WordEntered += new System.EventHandler(this.word6_WordEntered);
             // 
             // btnSettings
             // 
@@ -112,11 +65,70 @@
             this.lblUser.Size = new System.Drawing.Size(116, 40);
             this.lblUser.TabIndex = 39;
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(12, 41);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 41;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // word6
+            // 
+            this.word6.Location = new System.Drawing.Point(240, 250);
+            this.word6.Name = "word6";
+            this.word6.Size = new System.Drawing.Size(321, 38);
+            this.word6.TabIndex = 7;
+            this.word6.WordEntered += new System.EventHandler(this.word6_WordEntered);
+            // 
+            // word5
+            // 
+            this.word5.Location = new System.Drawing.Point(240, 206);
+            this.word5.Name = "word5";
+            this.word5.Size = new System.Drawing.Size(321, 38);
+            this.word5.TabIndex = 6;
+            this.word5.WordEntered += new System.EventHandler(this.word_WordEntered);
+            // 
+            // word4
+            // 
+            this.word4.Location = new System.Drawing.Point(240, 162);
+            this.word4.Name = "word4";
+            this.word4.Size = new System.Drawing.Size(321, 38);
+            this.word4.TabIndex = 5;
+            this.word4.WordEntered += new System.EventHandler(this.word_WordEntered);
+            // 
+            // word3
+            // 
+            this.word3.Location = new System.Drawing.Point(240, 118);
+            this.word3.Name = "word3";
+            this.word3.Size = new System.Drawing.Size(321, 38);
+            this.word3.TabIndex = 4;
+            this.word3.WordEntered += new System.EventHandler(this.word_WordEntered);
+            // 
+            // word2
+            // 
+            this.word2.Location = new System.Drawing.Point(240, 74);
+            this.word2.Name = "word2";
+            this.word2.Size = new System.Drawing.Size(321, 38);
+            this.word2.TabIndex = 3;
+            this.word2.WordEntered += new System.EventHandler(this.word_WordEntered);
+            // 
+            // word1
+            // 
+            this.word1.Location = new System.Drawing.Point(240, 30);
+            this.word1.Name = "word1";
+            this.word1.Size = new System.Drawing.Size(321, 38);
+            this.word1.TabIndex = 2;
+            this.word1.WordEntered += new System.EventHandler(this.word_WordEntered);
+            // 
             // Form6Letters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.word6);
@@ -145,5 +157,6 @@
         private Word6Letters word6;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
