@@ -61,7 +61,7 @@
             this.word6.Name = "word6";
             this.word6.Size = new System.Drawing.Size(270, 38);
             this.word6.TabIndex = 37;
-            this.word6.WordEntered += new System.EventHandler(this.word5_WordEntered);
+            this.word6.WordEntered += new System.EventHandler(this.word6_WordEntered);
             // 
             // word5
             // 

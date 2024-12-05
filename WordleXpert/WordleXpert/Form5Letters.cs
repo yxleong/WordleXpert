@@ -74,9 +74,10 @@ namespace WordleXpert
             }
         }
 
-        private void word5_WordEntered(object sender, EventArgs e)
+        private void word6_WordEntered(object sender, EventArgs e)
         {
             if (word5.Word == Answer)
+            if (word6.Word == Answer)
             {
                 GameFunctions.DisplayWin();
             }
