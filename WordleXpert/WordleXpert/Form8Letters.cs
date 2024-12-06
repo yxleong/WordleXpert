@@ -58,6 +58,8 @@ namespace WordleXpert
 
         private void word_WordEntered(object sender, EventArgs e)
         {
+            if (!Program.DisableHardMode) Program.DisableHardMode = true;
+
             var word = sender as Word8Letters;
             word.CheckLetters(Answer);
 

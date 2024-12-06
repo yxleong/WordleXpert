@@ -11,6 +11,8 @@ namespace WordleXpert
         public static string Language = "English";
         public static int WordLength = 5;
         public static bool IsInGame = false;
+        public static bool IsHardMode = false;
+        public static bool DisableHardMode = false;
 
         /// <summary>
         /// The main entry point for the application.

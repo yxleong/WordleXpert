@@ -30,7 +30,6 @@
         {
             this.lblLanguage = new System.Windows.Forms.Label();
             this.lblWordLength = new System.Windows.Forms.Label();
-            this.lblKeyboard = new System.Windows.Forms.Label();
             this.lblHardMode = new System.Windows.Forms.Label();
             this.lblDarkTheme = new System.Windows.Forms.Label();
             this.cboLanguage = new System.Windows.Forms.ComboBox();
@@ -38,6 +37,8 @@
             this.txtTest = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.chkHardMode = new System.Windows.Forms.CheckBox();
+            this.lblHardModeInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblLanguage
@@ -60,16 +61,6 @@
             this.lblWordLength.TabIndex = 1;
             this.lblWordLength.Text = "Word Length";
             // 
-            // lblKeyboard
-            // 
-            this.lblKeyboard.AutoSize = true;
-            this.lblKeyboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lblKeyboard.Location = new System.Drawing.Point(31, 203);
-            this.lblKeyboard.Name = "lblKeyboard";
-            this.lblKeyboard.Size = new System.Drawing.Size(276, 24);
-            this.lblKeyboard.TabIndex = 2;
-            this.lblKeyboard.Text = "On-screen Keyboard Input Only";
-            // 
             // lblHardMode
             // 
             this.lblHardMode.AutoSize = true;
@@ -84,7 +75,7 @@
             // 
             this.lblDarkTheme.AutoSize = true;
             this.lblDarkTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lblDarkTheme.Location = new System.Drawing.Point(31, 254);
+            this.lblDarkTheme.Location = new System.Drawing.Point(31, 202);
             this.lblDarkTheme.Name = "lblDarkTheme";
             this.lblDarkTheme.Size = new System.Drawing.Size(114, 24);
             this.lblDarkTheme.TabIndex = 4;
@@ -120,14 +111,14 @@
             // 
             // txtTest
             // 
-            this.txtTest.Location = new System.Drawing.Point(62, 289);
+            this.txtTest.Location = new System.Drawing.Point(54, 240);
             this.txtTest.Name = "txtTest";
             this.txtTest.Size = new System.Drawing.Size(389, 20);
             this.txtTest.TabIndex = 7;
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(100, 335);
+            this.btnConfirm.Location = new System.Drawing.Point(99, 280);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(116, 23);
             this.btnConfirm.TabIndex = 8;
@@ -137,7 +128,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(285, 335);
+            this.btnCancel.Location = new System.Drawing.Point(284, 280);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(116, 23);
             this.btnCancel.TabIndex = 9;
@@ -145,11 +136,33 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // chkHardMode
+            // 
+            this.chkHardMode.AutoSize = true;
+            this.chkHardMode.Location = new System.Drawing.Point(415, 159);
+            this.chkHardMode.Name = "chkHardMode";
+            this.chkHardMode.Size = new System.Drawing.Size(15, 14);
+            this.chkHardMode.TabIndex = 10;
+            this.chkHardMode.UseVisualStyleBackColor = true;
+            this.chkHardMode.CheckedChanged += new System.EventHandler(this.chkHardMode_CheckedChanged);
+            // 
+            // lblHardModeInfo
+            // 
+            this.lblHardModeInfo.AutoSize = true;
+            this.lblHardModeInfo.Location = new System.Drawing.Point(32, 173);
+            this.lblHardModeInfo.Name = "lblHardModeInfo";
+            this.lblHardModeInfo.Size = new System.Drawing.Size(262, 13);
+            this.lblHardModeInfo.TabIndex = 11;
+            this.lblHardModeInfo.Text = "Hard mode can only be enabled at the start of a round";
+            this.lblHardModeInfo.Visible = false;
+            // 
             // FormSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 375);
+            this.ClientSize = new System.Drawing.Size(504, 323);
+            this.Controls.Add(this.lblHardModeInfo);
+            this.Controls.Add(this.chkHardMode);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtTest);
@@ -157,7 +170,6 @@
             this.Controls.Add(this.cboLanguage);
             this.Controls.Add(this.lblDarkTheme);
             this.Controls.Add(this.lblHardMode);
-            this.Controls.Add(this.lblKeyboard);
             this.Controls.Add(this.lblWordLength);
             this.Controls.Add(this.lblLanguage);
             this.Name = "FormSettings";
@@ -172,7 +184,6 @@
 
         private System.Windows.Forms.Label lblLanguage;
         private System.Windows.Forms.Label lblWordLength;
-        private System.Windows.Forms.Label lblKeyboard;
         private System.Windows.Forms.Label lblHardMode;
         private System.Windows.Forms.Label lblDarkTheme;
         private System.Windows.Forms.ComboBox cboLanguage;
@@ -180,5 +191,7 @@
         private System.Windows.Forms.TextBox txtTest;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.CheckBox chkHardMode;
+        private System.Windows.Forms.Label lblHardModeInfo;
     }
 }
