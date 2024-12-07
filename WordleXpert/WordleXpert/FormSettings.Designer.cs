@@ -38,6 +38,8 @@
             this.txtTest = new System.Windows.Forms.TextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.chkHardMode = new System.Windows.Forms.CheckBox();
+            this.lblHardModeInfo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblLanguage
@@ -85,6 +87,7 @@
             this.lblDarkTheme.AutoSize = true;
             this.lblDarkTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.lblDarkTheme.Location = new System.Drawing.Point(31, 254);
+            this.lblDarkTheme.Location = new System.Drawing.Point(31, 202);
             this.lblDarkTheme.Name = "lblDarkTheme";
             this.lblDarkTheme.Size = new System.Drawing.Size(114, 24);
             this.lblDarkTheme.TabIndex = 4;
@@ -121,6 +124,7 @@
             // txtTest
             // 
             this.txtTest.Location = new System.Drawing.Point(62, 289);
+            this.txtTest.Location = new System.Drawing.Point(54, 240);
             this.txtTest.Name = "txtTest";
             this.txtTest.Size = new System.Drawing.Size(389, 20);
             this.txtTest.TabIndex = 7;
@@ -128,6 +132,7 @@
             // btnConfirm
             // 
             this.btnConfirm.Location = new System.Drawing.Point(100, 335);
+            this.btnConfirm.Location = new System.Drawing.Point(99, 280);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(116, 23);
             this.btnConfirm.TabIndex = 8;
@@ -138,18 +143,42 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(285, 335);
+            this.btnCancel.Location = new System.Drawing.Point(284, 280);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(116, 23);
             this.btnCancel.TabIndex = 9;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            //
+            // chkHardMode
+            // 
+            this.chkHardMode.AutoSize = true;
+            this.chkHardMode.Location = new System.Drawing.Point(415, 159);
+            this.chkHardMode.Name = "chkHardMode";
+            this.chkHardMode.Size = new System.Drawing.Size(15, 14);
+            this.chkHardMode.TabIndex = 10;
+            this.chkHardMode.UseVisualStyleBackColor = true;
+            this.chkHardMode.CheckedChanged += new System.EventHandler(this.chkHardMode_CheckedChanged);
+            // 
+            // lblHardModeInfo
+            // 
+            this.lblHardModeInfo.AutoSize = true;
+            this.lblHardModeInfo.Location = new System.Drawing.Point(32, 173);
+            this.lblHardModeInfo.Name = "lblHardModeInfo";
+            this.lblHardModeInfo.Size = new System.Drawing.Size(262, 13);
+            this.lblHardModeInfo.TabIndex = 11;
+            this.lblHardModeInfo.Text = "Hard mode can only be enabled at the start of a round";
+            this.lblHardModeInfo.Visible = false;
             // 
             // FormSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 375);
+            this.ClientSize = new System.Drawing.Size(504, 323);
+            this.Controls.Add(this.lblHardModeInfo);
+            this.Controls.Add(this.chkHardMode);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.txtTest);
@@ -180,5 +209,7 @@
         private System.Windows.Forms.TextBox txtTest;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.CheckBox chkHardMode;
+        private System.Windows.Forms.Label lblHardModeInfo;
     }
 }

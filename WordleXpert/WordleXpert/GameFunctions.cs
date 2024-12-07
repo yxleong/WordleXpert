@@ -19,6 +19,7 @@ namespace WordleXpert
         public void DisplayWin()
         {
             Program.IsInGame = false;
+            Program.DisableHardMode = false;
 
             // update stats
             // total games played, win percentage, how many guesses
@@ -35,6 +36,7 @@ namespace WordleXpert
         public void DisplayLose(string answer)
         {
             Program.IsInGame = false;
+            Program.DisableHardMode = false;
 
             // update stats
             // total games played, win percentage
@@ -58,6 +60,7 @@ namespace WordleXpert
                 if (result == DialogResult.Yes)
                 {
                     Program.IsInGame = false;
+                    Program.DisableHardMode = false;
                     GameForm.Close();
                 }
             }

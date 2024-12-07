@@ -27,6 +27,10 @@ namespace WordleXpert
 
             cboLanguage.Text = SetLanguage;
             cboWordLength.Text = SetWordLength;
+            chkHardMode.Checked = Program.IsHardMode;
+
+            lblHardModeInfo.Visible = false;
+
             PrintSettings();
         }
 
@@ -34,6 +38,8 @@ namespace WordleXpert
         {
             txtTest.Text = Program.Language + " (" + SetLanguage + ") | ";
             txtTest.Text += Program.WordLength.ToString() + " (" + SetWordLength + ")";
+            txtTest.Text += Program.WordLength.ToString() + " (" + SetWordLength + ") | ";
+            txtTest.Text += "Hard Mode: " + Program.IsHardMode.ToString();
         }
 
         private void cboLanguage_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,6 +51,20 @@ namespace WordleXpert
         private void cboWordLength_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetWordLength = cboWordLength.Text;
+            PrintSettings();
+        }
+
+        private void chkHardMode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Program.DisableHardMode)
+            {
+                chkHardMode.Checked = Program.IsHardMode;
+                lblHardModeInfo.Visible = true;
+            }
+            else
+            {
+                Program.IsHardMode = chkHardMode.Checked;    
+            }
             PrintSettings();
         }
 
@@ -65,6 +85,8 @@ namespace WordleXpert
             }
 
             if (SetLanguage != Program.Language || SetWordLength != Program.WordLength.ToString())
+            }
+            else if (SetLanguage != Program.Language || SetWordLength != Program.WordLength.ToString())
             {
                 using (var formConfirmSettings = new FormConfirmSettings())
                 {
@@ -82,6 +104,10 @@ namespace WordleXpert
                     }
                 }
             }
+                    }
+                }
+            }
+            this.Close();
         }
     }
 }
