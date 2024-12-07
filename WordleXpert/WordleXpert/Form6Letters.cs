@@ -28,6 +28,11 @@ namespace WordleXpert
 
         private void Form6Letters_Load(object sender, EventArgs e)
         {
+            // get a random word as the answer
+            Random random = new Random((int)DateTime.Now.Millisecond);
+
+            string filename = "english_6.txt";
+            if (Program.Language == "Melayu") filename = "melayu_6.txt";
             lblUser.Text = Program.User;
             // get a random word as the answer
             Random random = new Random((int)DateTime.Now.Millisecond);

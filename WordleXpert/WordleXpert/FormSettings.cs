@@ -37,6 +37,7 @@ namespace WordleXpert
         private void PrintSettings()
         {
             txtTest.Text = Program.Language + " (" + SetLanguage + ") | ";
+            txtTest.Text += Program.WordLength.ToString() + " (" + SetWordLength + ")";
             txtTest.Text += Program.WordLength.ToString() + " (" + SetWordLength + ") | ";
             txtTest.Text += "Hard Mode: " + Program.IsHardMode.ToString();
         }
@@ -79,6 +80,11 @@ namespace WordleXpert
             {
                 Program.Language = SetLanguage;
                 Program.WordLength = Convert.ToInt32(SetWordLength);
+                this.Close();
+                return;
+            }
+
+            if (SetLanguage != Program.Language || SetWordLength != Program.WordLength.ToString())
             }
             else if (SetLanguage != Program.Language || SetWordLength != Program.WordLength.ToString())
             {
@@ -94,6 +100,10 @@ namespace WordleXpert
                         Program.WordLength = Convert.ToInt32(SetWordLength);
 
                         this.DialogResult = DialogResult.Yes;
+                        this.Close();
+                    }
+                }
+            }
                     }
                 }
             }

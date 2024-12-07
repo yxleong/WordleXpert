@@ -30,6 +30,7 @@
         {
             this.lblLanguage = new System.Windows.Forms.Label();
             this.lblWordLength = new System.Windows.Forms.Label();
+            this.lblKeyboard = new System.Windows.Forms.Label();
             this.lblHardMode = new System.Windows.Forms.Label();
             this.lblDarkTheme = new System.Windows.Forms.Label();
             this.cboLanguage = new System.Windows.Forms.ComboBox();
@@ -61,6 +62,16 @@
             this.lblWordLength.TabIndex = 1;
             this.lblWordLength.Text = "Word Length";
             // 
+            // lblKeyboard
+            // 
+            this.lblKeyboard.AutoSize = true;
+            this.lblKeyboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblKeyboard.Location = new System.Drawing.Point(31, 203);
+            this.lblKeyboard.Name = "lblKeyboard";
+            this.lblKeyboard.Size = new System.Drawing.Size(276, 24);
+            this.lblKeyboard.TabIndex = 2;
+            this.lblKeyboard.Text = "On-screen Keyboard Input Only";
+            // 
             // lblHardMode
             // 
             this.lblHardMode.AutoSize = true;
@@ -75,6 +86,7 @@
             // 
             this.lblDarkTheme.AutoSize = true;
             this.lblDarkTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblDarkTheme.Location = new System.Drawing.Point(31, 254);
             this.lblDarkTheme.Location = new System.Drawing.Point(31, 202);
             this.lblDarkTheme.Name = "lblDarkTheme";
             this.lblDarkTheme.Size = new System.Drawing.Size(114, 24);
@@ -111,6 +123,7 @@
             // 
             // txtTest
             // 
+            this.txtTest.Location = new System.Drawing.Point(62, 289);
             this.txtTest.Location = new System.Drawing.Point(54, 240);
             this.txtTest.Name = "txtTest";
             this.txtTest.Size = new System.Drawing.Size(389, 20);
@@ -118,6 +131,7 @@
             // 
             // btnConfirm
             // 
+            this.btnConfirm.Location = new System.Drawing.Point(100, 335);
             this.btnConfirm.Location = new System.Drawing.Point(99, 280);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(116, 23);
@@ -128,6 +142,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Location = new System.Drawing.Point(285, 335);
             this.btnCancel.Location = new System.Drawing.Point(284, 280);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(116, 23);
@@ -135,7 +150,7 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
+            //
             // chkHardMode
             // 
             this.chkHardMode.AutoSize = true;
@@ -160,6 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(504, 375);
             this.ClientSize = new System.Drawing.Size(504, 323);
             this.Controls.Add(this.lblHardModeInfo);
             this.Controls.Add(this.chkHardMode);
@@ -170,6 +186,7 @@
             this.Controls.Add(this.cboLanguage);
             this.Controls.Add(this.lblDarkTheme);
             this.Controls.Add(this.lblHardMode);
+            this.Controls.Add(this.lblKeyboard);
             this.Controls.Add(this.lblWordLength);
             this.Controls.Add(this.lblLanguage);
             this.Name = "FormSettings";
@@ -184,6 +201,7 @@
 
         private System.Windows.Forms.Label lblLanguage;
         private System.Windows.Forms.Label lblWordLength;
+        private System.Windows.Forms.Label lblKeyboard;
         private System.Windows.Forms.Label lblHardMode;
         private System.Windows.Forms.Label lblDarkTheme;
         private System.Windows.Forms.ComboBox cboLanguage;

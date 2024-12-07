@@ -21,6 +21,9 @@ namespace WordleXpert
         public Form5Letters()
         {
             InitializeComponent();
+            
+            Program.IsInGame = true;
+            GameFunctions = new GameFunctions(this);
             Program.IsInGame = true;
             GameFunctions = new GameFunctions(this);
             lblUser.Text = Program.User;
@@ -31,6 +34,8 @@ namespace WordleXpert
             // get a random word as the answer
             Random random = new Random((int)DateTime.Now.Millisecond);
 
+            string filename = "english_5.txt";
+            if (Program.Language == "Melayu") filename = "melayu_5.txt";
             string filename = "word_list/english_5.txt";
             if (Program.Language == "Melayu") filename = "word_list/melayu_5.txt";
 
