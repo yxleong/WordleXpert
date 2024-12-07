@@ -15,12 +15,14 @@ namespace WordleXpert
     {
         private static string Answer;
         private static int GuessCount;
+        private static GameFunctions GameFunctions;
 
         public Form7Letters()
         {
             InitializeComponent();
 
             Program.IsInGame = true;
+            GameFunctions = new GameFunctions(this);
             lblUser.Text = Program.User;
         }
 
@@ -30,8 +32,8 @@ namespace WordleXpert
             // get a random word as the answer
             Random random = new Random((int)DateTime.Now.Millisecond);
 
-            string filename = "english_7.txt";
-            if (Program.Language == "Melayu") filename = "melayu_7.txt";
+            string filename = "word_list/english_7.txt";
+            if (Program.Language == "Melayu") filename = "word_list/melayu_7.txt";
 
             string[] lines = File.ReadAllLines(filename);
 
@@ -58,16 +60,14 @@ namespace WordleXpert
 
         private void word_WordEntered(object sender, EventArgs e)
         {
+            if (!Program.DisableHardMode) Program.DisableHardMode = true;
+
             var word = sender as Word7Letters;
+            word.CheckLetters(Answer);
 
             if (word.Word == Answer)
             {
-                using (var formWin = new FormWin())
-                {
-                    formWin.StartPosition = FormStartPosition.CenterParent;
-                    formWin.FormClosing += delegate { this.Close(); };
-                    formWin.ShowDialog();
-                }
+                GameFunctions.DisplayWin();
             }
             else
             {
@@ -78,43 +78,21 @@ namespace WordleXpert
 
         private void word6_WordEntered(object sender, EventArgs e)
         {
-            Program.IsInGame = false;
+            word6.CheckLetters(Answer);
 
             if (word6.Word == Answer)
             {
-                Program.IsInGame = false;
-
-                using (var formWin = new FormWin())
-                {
-                    formWin.StartPosition = FormStartPosition.CenterParent;
-                    formWin.FormClosing += delegate { this.Close(); };
-                    formWin.ShowDialog();
-                }
+                GameFunctions.DisplayWin();
             }
             else
             {
-                using (var formLose = new FormLose(Answer))
-                {
-                    formLose.StartPosition = FormStartPosition.CenterParent;
-                    formLose.FormClosing += delegate { this.Close(); };
-                    formLose.ShowDialog();
-                }
+                GameFunctions.DisplayLose(Answer);
             }
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            using (var formSettings = new FormSettings())
-            {
-                formSettings.StartPosition = FormStartPosition.CenterParent;
-                var result = formSettings.ShowDialog();
-
-                if (result == DialogResult.Yes)
-                {
-                    Program.IsInGame = false;
-                    this.Close();
-                }
-            }
+            GameFunctions.DisplaySettings();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
