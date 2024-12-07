@@ -16,8 +16,6 @@ namespace WordleXpert
         public FormStartMenu()
         {
             InitializeComponent();
-           // panel1.BackgroundImage = Image.FromFile
-             //   (System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal) + @"\img\StartMenu_bg.png");
         }
 
         private void btnStart_Click(object sender, EventArgs e)
