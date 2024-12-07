@@ -30,6 +30,8 @@
         {
             this.txtAnswer = new System.Windows.Forms.TextBox();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.word6 = new WordleXpert.Word5Letters();
             this.word5 = new WordleXpert.Word5Letters();
             this.word4 = new WordleXpert.Word5Letters();
@@ -54,6 +56,24 @@
             this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // lblUser
+            // 
+            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.lblUser.Location = new System.Drawing.Point(655, 28);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(116, 40);
+            this.lblUser.TabIndex = 39;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(12, 45);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 40;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // word6
             // 
@@ -108,6 +128,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.word6);
             this.Controls.Add(this.word5);
@@ -134,5 +156,7 @@
         private Word5Letters word5;
         private Word5Letters word6;
         private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

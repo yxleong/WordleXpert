@@ -13,7 +13,7 @@ namespace WordleXpert
         public static bool IsInGame = false;
         public static bool IsHardMode = false;
         public static bool DisableHardMode = false;
-
+        public static string User = "Guest";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

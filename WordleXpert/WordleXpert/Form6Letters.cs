@@ -23,10 +23,12 @@ namespace WordleXpert
 
             Program.IsInGame = true;
             GameFunctions = new GameFunctions(this);
+            lblUser.Text = Program.User;
         }
 
         private void Form6Letters_Load(object sender, EventArgs e)
         {
+            lblUser.Text = Program.User;
             // get a random word as the answer
             Random random = new Random((int)DateTime.Now.Millisecond);
 
@@ -91,6 +93,11 @@ namespace WordleXpert
         private void btnSettings_Click(object sender, EventArgs e)
         {
             GameFunctions.DisplaySettings();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Program.User = "Guest";
         }
     }
 }
