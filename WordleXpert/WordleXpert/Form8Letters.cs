@@ -28,11 +28,6 @@ namespace WordleXpert
 
         private void Form8Letters_Load(object sender, EventArgs e)
         {
-            // get a random word as the answer
-            Random random = new Random((int)DateTime.Now.Millisecond);
-
-            string filename = "english_8.txt";
-            if (Program.Language == "Melayu") filename = "melayu_8.txt";
             lblUser.Text = Program.User;
             // get a random word as the answer
             Random random = new Random((int)DateTime.Now.Millisecond);
@@ -66,7 +61,7 @@ namespace WordleXpert
         private void word_WordEntered(object sender, EventArgs e)
         {
             if (!Program.DisableHardMode) Program.DisableHardMode = true;
-            
+
             var word = sender as Word8Letters;
             word.CheckLetters(Answer);
 
