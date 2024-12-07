@@ -30,8 +30,8 @@ namespace WordleXpert
             // get a random word as the answer
             Random random = new Random((int)DateTime.Now.Millisecond);
 
-            string filename = "english_7.txt";
-            if (Program.Language == "Melayu") filename = "melayu_7.txt";
+            string filename = "word_list/english_7.txt";
+            if (Program.Language == "Melayu") filename = "word_list/melayu_7.txt";
 
             string[] lines = File.ReadAllLines(filename);
 
