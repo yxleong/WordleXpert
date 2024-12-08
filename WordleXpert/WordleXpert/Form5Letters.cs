@@ -24,6 +24,15 @@ namespace WordleXpert
             Program.IsInGame = true;
             GameFunctions = new GameFunctions(this);
             lblUser.Text = Program.User;
+
+            if (lblUser.Text == "Guest")
+            {
+                btnLogout.Text = "Login/Register";
+            }
+            else
+            {
+                btnLogout.Text = "Logout";
+            }
         }
 
         private void Form5Letters_Load(object sender, EventArgs e)
@@ -96,8 +105,22 @@ namespace WordleXpert
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Program.User = "Guest";
-            this.Close();
+            if (btnLogout.Text == "Logout")
+            {
+                btnLogout.Text = "Login/Register";
+                Program.User = "Guest";
+                this.Close();
+            }
+            else if (btnLogout.Text == "Login/Register") 
+            {
+                using (var formAccount = new FormAccount())
+                {
+                    formAccount.StartPosition = FormStartPosition.CenterParent;
+                    formAccount.ShowDialog();
+                }
+                lblUser.Text = Program.User;
+                btnLogout.Text = "Logout";
+            }
         }
     }
 }

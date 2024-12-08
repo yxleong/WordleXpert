@@ -32,6 +32,7 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnAccount = new System.Windows.Forms.Button();
+            this.btnCheckStats = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -69,19 +70,31 @@
             // btnAccount
             // 
             this.btnAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.btnAccount.Location = new System.Drawing.Point(548, 264);
+            this.btnAccount.Location = new System.Drawing.Point(525, 235);
             this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(158, 61);
+            this.btnAccount.Size = new System.Drawing.Size(184, 43);
             this.btnAccount.TabIndex = 3;
-            this.btnAccount.Text = "Account";
+            this.btnAccount.Text = "Login/Register";
             this.btnAccount.UseVisualStyleBackColor = true;
             this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
+            // 
+            // btnCheckStats
+            // 
+            this.btnCheckStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnCheckStats.Location = new System.Drawing.Point(525, 317);
+            this.btnCheckStats.Name = "btnCheckStats";
+            this.btnCheckStats.Size = new System.Drawing.Size(184, 43);
+            this.btnCheckStats.TabIndex = 4;
+            this.btnCheckStats.Text = "Check";
+            this.btnCheckStats.UseVisualStyleBackColor = true;
+            this.btnCheckStats.Click += new System.EventHandler(this.btnCheckStats_Click);
             // 
             // FormStartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCheckStats);
             this.Controls.Add(this.btnAccount);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnStart);
@@ -99,5 +112,6 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnAccount;
+        private System.Windows.Forms.Button btnCheckStats;
     }
 }

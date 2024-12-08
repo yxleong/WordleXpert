@@ -45,7 +45,7 @@ namespace WordleXpert
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            if(btnAccount.Text == "Account")
+            if(btnAccount.Text == "Login/Register")
             {
                 using (var formAccount = new FormAccount())
                 {
@@ -56,9 +56,30 @@ namespace WordleXpert
             }
             else if(btnAccount.Text == "logout")
             {
-                btnAccount.Text = "Account";
+                Program.SaveUserStats();
+                btnAccount.Text = "Login/Register";
                 Program.User = "Guest";
+                Program.TotalGamesPlayed = 0;
+                Program.TotalWins = 0;
+                Program.WinPercentage = 0;
             }
         }
+
+        private void btnCheckStats_Click(object sender, EventArgs e)
+        {
+            if (Program.User == "Guest")
+            {
+                MessageBox.Show("You are logged in as Guest. No stats are available.", "User Stats", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            string statsMessage = $"Username: {Program.User}\n" +
+                                  $"Total Games Played: {Program.TotalGamesPlayed}\n" +
+                                  $"Total Wins: {Program.TotalWins}\n" +
+                                  $"Win Percentage: {Program.WinPercentage:F2}%";
+
+            MessageBox.Show(statsMessage, "User Stats", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 }

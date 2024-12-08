@@ -23,6 +23,11 @@ namespace WordleXpert
 
             // update stats
             // total games played, win percentage, how many guesses
+            Program.TotalGamesPlayed++;
+            Program.TotalWins++;
+            Program.WinPercentage = (double)Program.TotalWins / Program.TotalGamesPlayed * 100;
+            Program.SaveUserStats();
+
 
             // display window
             using (var formWin = new FormWin())
@@ -40,6 +45,9 @@ namespace WordleXpert
 
             // update stats
             // total games played, win percentage
+            Program.TotalGamesPlayed++;
+            Program.WinPercentage = (double)Program.TotalWins / Program.TotalGamesPlayed * 100;
+            Program.SaveUserStats();
 
             // display window
             using (var formLose = new FormLose(answer))
