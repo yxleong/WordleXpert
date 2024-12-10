@@ -63,14 +63,13 @@ namespace WordleXpert
         {
             if (!Program.DisableHardMode) Program.DisableHardMode = true;
 
-            var word = sender as Word5Letters;
-            word.CheckLetters(Answer);
+            word1.CheckLetters(Answer);
 
             if (Program.IsHardMode)
             {
                 // update hints
-                HintCorrectLetters = word.HintCorrectLetters;
-                HintExistingLetters = word.HintExistingLetters;
+                HintCorrectLetters = word1.HintCorrectLetters;
+                HintExistingLetters = word1.HintExistingLetters;
 
                 // display hints for debug
                 txtHints.Text = "";
@@ -78,7 +77,7 @@ namespace WordleXpert
                 txtHints.Text += HintExistingLetters;
             }
 
-            if (word.Word == Answer)
+            if (word1.Word == Answer)
             {
                 GameFunctions.DisplayWin();
             }
@@ -143,6 +142,7 @@ namespace WordleXpert
                     return;
                 }
             }
+
             word6.CheckLetters(Answer);
 
             if (word6.Word == Answer)
