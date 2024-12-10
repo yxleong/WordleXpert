@@ -16,6 +16,8 @@ namespace WordleXpert
         private static string Answer;
         private static int GuessCount;
         private static GameFunctions GameFunctions;
+        private static char[] HintCorrectLetters;
+        private static string HintExistingLetters;
 
         public Form8Letters()
         {
@@ -58,12 +60,55 @@ namespace WordleXpert
             }
         }
 
+        private void word1_WordEntered(object sender, EventArgs e)
+        {
+            if (!Program.DisableHardMode) Program.DisableHardMode = true;
+
+            word1.CheckLetters(Answer);
+
+            if (Program.IsHardMode)
+            {
+                // update hints
+                HintCorrectLetters = word1.HintCorrectLetters;
+                HintExistingLetters = word1.HintExistingLetters;
+            }
+
+            if (word1.Word == Answer)
+            {
+                GameFunctions.DisplayWin();
+            }
+            else
+            {
+                GuessCount++;
+                HandleWordFocus();
+            }
+        }
+
         private void word_WordEntered(object sender, EventArgs e)
         {
             if (!Program.DisableHardMode) Program.DisableHardMode = true;
 
             var word = sender as Word8Letters;
+
+            if (Program.IsHardMode)
+            {
+                string hint = GameFunctions.CheckWordValid(word.Word, HintCorrectLetters, HintExistingLetters);
+
+                if (hint != "")
+                {
+                    MessageBox.Show(hint);
+                    return;
+                }
+            }
+
             word.CheckLetters(Answer);
+
+            if (Program.IsHardMode)
+            {
+                // update hints
+                HintCorrectLetters = word.HintCorrectLetters;
+                HintExistingLetters = word.HintExistingLetters;
+            }
 
             if (word.Word == Answer)
             {
@@ -78,6 +123,17 @@ namespace WordleXpert
 
         private void word6_WordEntered(object sender, EventArgs e)
         {
+            if (Program.IsHardMode)
+            {
+                string hint = GameFunctions.CheckWordValid(word6.Word, HintCorrectLetters, HintExistingLetters);
+
+                if (hint != "")
+                {
+                    MessageBox.Show(hint);
+                    return;
+                }
+            }
+
             word6.CheckLetters(Answer);
 
             if (word6.Word == Answer)
