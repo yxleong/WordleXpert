@@ -16,6 +16,9 @@ namespace WordleXpert
         private System.Windows.Forms.TextBox[] tbArray;
         private Dictionary<char, int> lettersDict = new Dictionary<char, int>();
 
+        public char[] HintCorrectLetters = { '*', '*', '*', '*', '*' };
+        public string HintExistingLetters = "";
+
         public string Word { get { return _word; } }
 
         public event EventHandler WordEntered;
@@ -152,6 +155,8 @@ namespace WordleXpert
                 {
                     tbArray[i].BackColor = Color.LimeGreen;
                     lettersDict[tbArray[i].Text[0]]--;
+
+                    if (Program.IsHardMode) HintCorrectLetters[i] = answer[i];
                 }
             }
         }
@@ -160,10 +165,12 @@ namespace WordleXpert
         {
             for (int i = 0; i < tbArray.Length; i++)
             {
-                if (answer.Contains(tbArray[i].Text[0]) && lettersDict[tbArray[i].Text[0]] > 0)
+                if (answer.Contains(tbArray[i].Text[0]) && lettersDict[tbArray[i].Text[0]] > 0 && tbArray[i].BackColor != Color.LimeGreen)
                 {
                     tbArray[i].BackColor = Color.Yellow;
                     lettersDict[tbArray[i].Text[0]]--;
+
+                    if (Program.IsHardMode) HintExistingLetters += tbArray[i].Text[0];
                 }
             }
         }
