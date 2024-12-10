@@ -17,6 +17,8 @@ namespace WordleXpert
         private static string Answer;
         private static int GuessCount;
         private static GameFunctions GameFunctions;
+        private static char[] HintCorrectLetters;
+        private static string HintExistingLetters;
 
         public Form5Letters()
         {
@@ -57,12 +59,66 @@ namespace WordleXpert
             }
         }
 
-        private void word_WordEntered(object sender, EventArgs e)
+        private void word1_WordEntered(object sender, EventArgs e)
         {
             if (!Program.DisableHardMode) Program.DisableHardMode = true;
 
             var word = sender as Word5Letters;
             word.CheckLetters(Answer);
+
+            if (Program.IsHardMode)
+            {
+                // update hints
+                HintCorrectLetters = word.HintCorrectLetters;
+                HintExistingLetters = word.HintExistingLetters;
+
+                // display hints for debug
+                txtHints.Text = "";
+                txtHints.Text += string.Join(" ", HintCorrectLetters) + "\r\n";
+                txtHints.Text += HintExistingLetters;
+            }
+
+            if (word.Word == Answer)
+            {
+                GameFunctions.DisplayWin();
+            }
+            else
+            {
+                GuessCount++;
+                HandleWordFocus();
+            }
+        }
+
+        private void word_WordEntered(object sender, EventArgs e)
+        {
+            if (!Program.DisableHardMode) Program.DisableHardMode = true;
+
+            var word = sender as Word5Letters;
+
+            if (Program.IsHardMode)
+            {
+                string hint = word.CheckWordValid(word.Word, HintCorrectLetters, HintExistingLetters);
+
+                if (hint != "")
+                {
+                    MessageBox.Show(hint);
+                    return;
+                }
+            }
+
+            word.CheckLetters(Answer);
+
+            if (Program.IsHardMode)
+            {
+                // update hints
+                HintCorrectLetters = word.HintCorrectLetters;
+                HintExistingLetters = word.HintExistingLetters;
+
+                // display hints for debug
+                txtHints.Text = "";
+                txtHints.Text += string.Join(" ", HintCorrectLetters) + "\r\n";
+                txtHints.Text += HintExistingLetters;
+            }
 
             if (word.Word == Answer)
             {
@@ -77,6 +133,16 @@ namespace WordleXpert
 
         private void word6_WordEntered(object sender, EventArgs e)
         {
+            if (Program.IsHardMode)
+            {
+                string hint = word6.CheckWordValid(word6.Word, HintCorrectLetters, HintExistingLetters);
+
+                if (hint != "")
+                {
+                    MessageBox.Show(hint);
+                    return;
+                }
+            }
             word6.CheckLetters(Answer);
 
             if (word6.Word == Answer)

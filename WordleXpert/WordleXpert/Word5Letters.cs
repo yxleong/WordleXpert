@@ -17,6 +17,9 @@ namespace WordleXpert
         private System.Windows.Forms.TextBox[] tbArray;
         private Dictionary<char, int> lettersDict = new Dictionary<char, int>();
 
+        public char[] HintCorrectLetters = { '*', '*', '*', '*', '*' };
+        public string HintExistingLetters = "";
+
         public string Word { get { return _word; } }
 
         public event EventHandler WordEntered;
@@ -151,6 +154,8 @@ namespace WordleXpert
                 {
                     tbArray[i].BackColor = Color.LimeGreen;
                     lettersDict[tbArray[i].Text[0]]--;
+
+                    if (Program.IsHardMode) HintCorrectLetters[i] = answer[i];
                 }
             }
         }
@@ -159,10 +164,12 @@ namespace WordleXpert
         {
             for (int i = 0; i < tbArray.Length; i++)
             {
-                if (answer.Contains(tbArray[i].Text[0]) && lettersDict[tbArray[i].Text[0]] > 0)
+                if (answer.Contains(tbArray[i].Text[0]) && lettersDict[tbArray[i].Text[0]] > 0 && tbArray[i].BackColor != Color.LimeGreen)
                 {
                     tbArray[i].BackColor = Color.Yellow;
                     lettersDict[tbArray[i].Text[0]]--;
+
+                    if (Program.IsHardMode) HintExistingLetters += tbArray[i].Text[0];
                 }
             }
         }
@@ -177,6 +184,50 @@ namespace WordleXpert
 
             CheckCorrectLetters(answer);
             CheckExistingLetters(answer);
+        }
+
+        public string CheckWordValid(string guessWord, char[] hintCorrectLetters, string hintExistingLetters)
+        {
+            string tempGuessWord = guessWord;
+
+            for (int i = 0; i < hintCorrectLetters.Length; i++)
+            {
+                if (hintCorrectLetters[i] != '*' && guessWord[i] != hintCorrectLetters[i])
+                {
+                    string num;
+                    if (i == 0) num = "1st";
+                    else if (i == 1) num = "2nd";
+                    else if (i == 2) num = "3rd";
+                    else num = (i + 1).ToString() + "th";
+
+                    return num + " letter must be " + hintCorrectLetters[i];
+                }
+                else if (guessWord[i] == hintCorrectLetters[i])
+                {
+                    char[] sep = { hintCorrectLetters[i] };
+                    string[] temp = tempGuessWord.Split(sep, 2);
+                    tempGuessWord = string.Join("", temp);
+                }
+            }
+
+            guessWord = tempGuessWord;
+
+            for (int i = 0; i < hintExistingLetters.Length; i++)
+            {
+                if (guessWord.Contains(hintExistingLetters[i]))
+                {
+                    char[] sep = { hintExistingLetters[i] };
+                    string[] temp = guessWord.Split(sep, 2);
+                    guessWord = string.Join("", temp);
+
+                }
+                else
+                {
+                    return "Guess must contain " + hintExistingLetters[i];
+                }
+            }
+
+            return "";
         }
     }
 }

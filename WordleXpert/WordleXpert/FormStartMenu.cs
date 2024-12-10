@@ -29,7 +29,7 @@ namespace WordleXpert
 
             formGame.Location = this.Location;
             formGame.StartPosition = FormStartPosition.Manual;
-            formGame.FormClosing += delegate { this.Show(); };
+            formGame.FormClosing += delegate { Program.IsInGame = false; Program.DisableHardMode = false; this.Show(); };
             formGame.Show();
             this.Hide();
         }
