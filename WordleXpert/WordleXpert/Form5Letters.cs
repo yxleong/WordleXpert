@@ -97,7 +97,7 @@ namespace WordleXpert
 
             if (Program.IsHardMode)
             {
-                string hint = word.CheckWordValid(word.Word, HintCorrectLetters, HintExistingLetters);
+                string hint = GameFunctions.CheckWordValid(word.Word, HintCorrectLetters, HintExistingLetters);
 
                 if (hint != "")
                 {
@@ -135,7 +135,7 @@ namespace WordleXpert
         {
             if (Program.IsHardMode)
             {
-                string hint = word6.CheckWordValid(word6.Word, HintCorrectLetters, HintExistingLetters);
+                string hint = GameFunctions.CheckWordValid(word6.Word, HintCorrectLetters, HintExistingLetters);
 
                 if (hint != "")
                 {
