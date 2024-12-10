@@ -16,7 +16,7 @@ namespace WordleXpert
         private System.Windows.Forms.TextBox[] tbArray;
         private Dictionary<char, int> lettersDict = new Dictionary<char, int>();
 
-        public char[] HintCorrectLetters = { '*', '*', '*', '*', '*' };
+        public char[] HintCorrectLetters = { '*', '*', '*', '*', '*', '*' };
         public string HintExistingLetters = "";
 
         public string Word { get { return _word; } }
