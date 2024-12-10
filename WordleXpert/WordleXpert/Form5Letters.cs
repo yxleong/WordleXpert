@@ -70,11 +70,6 @@ namespace WordleXpert
                 // update hints
                 HintCorrectLetters = word1.HintCorrectLetters;
                 HintExistingLetters = word1.HintExistingLetters;
-
-                // display hints for debug
-                txtHints.Text = "";
-                txtHints.Text += string.Join(" ", HintCorrectLetters) + "\r\n";
-                txtHints.Text += HintExistingLetters;
             }
 
             if (word1.Word == Answer)
@@ -112,11 +107,6 @@ namespace WordleXpert
                 // update hints
                 HintCorrectLetters = word.HintCorrectLetters;
                 HintExistingLetters = word.HintExistingLetters;
-
-                // display hints for debug
-                txtHints.Text = "";
-                txtHints.Text += string.Join(" ", HintCorrectLetters) + "\r\n";
-                txtHints.Text += HintExistingLetters;
             }
 
             if (word.Word == Answer)

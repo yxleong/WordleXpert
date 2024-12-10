@@ -38,7 +38,6 @@
             this.word3 = new WordleXpert.Word5Letters();
             this.word2 = new WordleXpert.Word5Letters();
             this.word1 = new WordleXpert.Word5Letters();
-            this.txtHints = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtAnswer
@@ -124,20 +123,11 @@
             this.word1.TabIndex = 32;
             this.word1.WordEntered += new System.EventHandler(this.word1_WordEntered);
             // 
-            // txtHints
-            // 
-            this.txtHints.Location = new System.Drawing.Point(688, 347);
-            this.txtHints.Multiline = true;
-            this.txtHints.Name = "txtHints";
-            this.txtHints.Size = new System.Drawing.Size(100, 50);
-            this.txtHints.TabIndex = 41;
-            // 
             // Form5Letters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtHints);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnSettings);
@@ -168,6 +158,5 @@
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.TextBox txtHints;
     }
 }
