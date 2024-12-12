@@ -43,7 +43,7 @@ namespace WordleXpert
         {
             int letterCount = _word.Length;
 
-            for (int i = 0;  i < tbArray.Length; i++)
+            for (int i = 0; i < tbArray.Length; i++)
             {
                 if (i == tbArray.Length - 1)
                 {
@@ -103,6 +103,19 @@ namespace WordleXpert
             HandleLetterFocus();
         }
 
+        //private void txtLetter_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Back)
+        //    {
+        //        e.Handled = true;
+        //        e.SuppressKeyPress = true;
+
+        //        HandleBackspace();
+        //        UpdateCurrentWord();
+        //        HandleLetterFocus();
+        //    }
+        //}
+
         private void txtLetter_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Back)
@@ -110,9 +123,10 @@ namespace WordleXpert
                 e.Handled = true;
                 e.SuppressKeyPress = true;
 
-                HandleBackspace();
-                UpdateCurrentWord();
-                HandleLetterFocus();
+                HandleInput("←");
+                //HandleBackspace();
+                //UpdateCurrentWord();
+                //HandleLetterFocus();
             }
         }
 
@@ -141,6 +155,44 @@ namespace WordleXpert
             {
                 e.SuppressKeyPress = true;
             }
+        }
+
+        public void btnKeyboard_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Button clickedButton = sender as System.Windows.Forms.Button;
+
+            if (clickedButton != null)
+            {
+                HandleInput(clickedButton.Text);
+            }
+        }
+
+        // handle inputs (from keyboard and mouse)
+        private void HandleInput(string input)
+        {
+            // backspace
+            if (input == "←")
+            {
+                HandleBackspace();
+            }
+            else if (input == "Enter")
+            {
+                if (_word.Length == 5)
+                {
+                    OnWordEntered(EventArgs.Empty);
+                }
+            }
+            else
+            {
+                // letters
+                if (_word.Length < 5)
+                {
+                    tbArray[_word.Length].Text = input;
+                    UpdateCurrentWord();
+                    HandleLetterFocus();
+                }
+            }
+
         }
 
         private void CheckCorrectLetters(string answer)

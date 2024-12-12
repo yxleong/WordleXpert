@@ -24,9 +24,6 @@ namespace WordleXpert
             
             Program.IsInGame = true;
             GameFunctions = new GameFunctions(this);
-            Program.IsInGame = true;
-            GameFunctions = new GameFunctions(this);
-            lblUser.Text = Program.User;
         }
 
         private void Form5Letters_Load(object sender, EventArgs e)
@@ -36,8 +33,6 @@ namespace WordleXpert
 
             string filename = "english_5.txt";
             if (Program.Language == "Melayu") filename = "melayu_5.txt";
-            string filename = "word_list/english_5.txt";
-            if (Program.Language == "Melayu") filename = "word_list/melayu_5.txt";
 
             string[] lines = File.ReadAllLines(filename);
 
@@ -64,8 +59,6 @@ namespace WordleXpert
 
         private void word_WordEntered(object sender, EventArgs e)
         {
-            if (!Program.DisableHardMode) Program.DisableHardMode = true;
-
             var word = sender as Word5Letters;
             word.CheckLetters(Answer);
 
@@ -94,15 +87,12 @@ namespace WordleXpert
             }
         }
 
-        private void btnSettings_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
             GameFunctions.DisplaySettings();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            Program.User = "Guest";
-            this.Close();
-        }
+        // enter words in click mode
+
     }
 }
