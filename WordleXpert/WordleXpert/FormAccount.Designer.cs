@@ -76,6 +76,7 @@
             this.pwdText.Name = "pwdText";
             this.pwdText.Size = new System.Drawing.Size(275, 29);
             this.pwdText.TabIndex = 2;
+            this.pwdText.TextChanged += new System.EventHandler(this.pwdText_TextChanged);
             // 
             // usrText
             // 
