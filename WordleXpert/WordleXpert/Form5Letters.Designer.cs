@@ -121,7 +121,7 @@
             this.word1.Name = "word1";
             this.word1.Size = new System.Drawing.Size(270, 38);
             this.word1.TabIndex = 32;
-            this.word1.WordEntered += new System.EventHandler(this.word_WordEntered);
+            this.word1.WordEntered += new System.EventHandler(this.word1_WordEntered);
             // 
             // Form5Letters
             // 
