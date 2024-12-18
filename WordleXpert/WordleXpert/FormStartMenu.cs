@@ -81,5 +81,13 @@ namespace WordleXpert
             MessageBox.Show(statsMessage, "User Stats", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void btnHow_Click(object sender, EventArgs e)
+        {
+            using (var formHow2Play = new FormHow2Play())
+            {
+                formHow2Play.StartPosition = FormStartPosition.CenterParent;
+                formHow2Play.ShowDialog();
+            }
+        }
     }
 }

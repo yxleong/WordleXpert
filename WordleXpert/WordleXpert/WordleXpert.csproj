@@ -82,6 +82,12 @@
     <Compile Include="FormConfirmSettings.Designer.cs">
       <DependentUpon>FormConfirmSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHow2Play.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHow2Play.Designer.cs">
+      <DependentUpon>FormHow2Play.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormConfirmSettings.resx">
       <DependentUpon>FormConfirmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHow2Play.resx">
+      <DependentUpon>FormHow2Play.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLose.resx">
       <DependentUpon>FormLose.cs</DependentUpon>

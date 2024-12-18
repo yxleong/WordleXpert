@@ -33,6 +33,7 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnAccount = new System.Windows.Forms.Button();
             this.btnCheckStats = new System.Windows.Forms.Button();
+            this.btnHow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelTitle
@@ -89,11 +90,23 @@
             this.btnCheckStats.UseVisualStyleBackColor = true;
             this.btnCheckStats.Click += new System.EventHandler(this.btnCheckStats_Click);
             // 
+            // btnHow
+            // 
+            this.btnHow.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.btnHow.Location = new System.Drawing.Point(582, 123);
+            this.btnHow.Name = "btnHow";
+            this.btnHow.Size = new System.Drawing.Size(49, 43);
+            this.btnHow.TabIndex = 5;
+            this.btnHow.Text = "?";
+            this.btnHow.UseVisualStyleBackColor = true;
+            this.btnHow.Click += new System.EventHandler(this.btnHow_Click);
+            // 
             // FormStartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnHow);
             this.Controls.Add(this.btnCheckStats);
             this.Controls.Add(this.btnAccount);
             this.Controls.Add(this.btnSettings);
@@ -113,5 +126,6 @@
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Button btnCheckStats;
+        private System.Windows.Forms.Button btnHow;
     }
 }
