@@ -37,6 +37,7 @@ namespace WordleXpert
                             "3. 語言或單詞長度可在設置中進行選擇\n" +
                             "4. 困難模式: 下一次猜測必須包含之前揭示的提示字母\n" +
                             "5. 註冊或登錄後即可查看你的成績\n";
+                btnOK.Text = "明白了";
             }
             else
             {
@@ -49,6 +50,7 @@ namespace WordleXpert
                             "3. Set Your Preferences: Language or Word Length\n" +
                             "4. Hard Mode: next guess must include revealed hints\n" +
                             "5. Register to See your guess\n";
+                btnOK.Text = "Understood";
             }
         }
     }
