@@ -61,13 +61,13 @@
             this.btnE = new System.Windows.Forms.Button();
             this.btnW = new System.Windows.Forms.Button();
             this.btnQ = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
             this.word6 = new WordleXpert.Word8Letters();
             this.word5 = new WordleXpert.Word8Letters();
             this.word4 = new WordleXpert.Word8Letters();
             this.word3 = new WordleXpert.Word8Letters();
             this.word2 = new WordleXpert.Word8Letters();
             this.word1 = new WordleXpert.Word8Letters();
-            this.lblUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureTheme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureHow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSetting)).BeginInit();
@@ -75,18 +75,18 @@
             // 
             // txtAnswer
             // 
-            this.txtAnswer.Location = new System.Drawing.Point(650, 367);
+            this.txtAnswer.Location = new System.Drawing.Point(650, 398);
             this.txtAnswer.Name = "txtAnswer";
-            this.txtAnswer.Size = new System.Drawing.Size(100, 22);
+            this.txtAnswer.Size = new System.Drawing.Size(100, 20);
             this.txtAnswer.TabIndex = 41;
             // 
             // labelTime
             // 
             this.labelTime.AutoSize = true;
             this.labelTime.BackColor = System.Drawing.SystemColors.Window;
-            this.labelTime.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.labelTime.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.labelTime.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.labelTime.Location = new System.Drawing.Point(559, 100);
+            this.labelTime.Location = new System.Drawing.Point(559, 108);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(62, 24);
             this.labelTime.TabIndex = 98;
@@ -95,9 +95,9 @@
             // pictureTheme
             // 
             this.pictureTheme.BackgroundImage = global::WordleXpert.Properties.Resources.Change_color;
-            this.pictureTheme.Location = new System.Drawing.Point(93, 98);
+            this.pictureTheme.Location = new System.Drawing.Point(93, 106);
             this.pictureTheme.Name = "pictureTheme";
-            this.pictureTheme.Size = new System.Drawing.Size(25, 26);
+            this.pictureTheme.Size = new System.Drawing.Size(25, 27);
             this.pictureTheme.TabIndex = 94;
             this.pictureTheme.TabStop = false;
             this.pictureTheme.Click += new System.EventHandler(this.pictureTheme_Click);
@@ -105,9 +105,9 @@
             // pictureHow
             // 
             this.pictureHow.BackgroundImage = global::WordleXpert.Properties.Resources.HowToPlay;
-            this.pictureHow.Location = new System.Drawing.Point(58, 99);
+            this.pictureHow.Location = new System.Drawing.Point(58, 107);
             this.pictureHow.Name = "pictureHow";
-            this.pictureHow.Size = new System.Drawing.Size(24, 24);
+            this.pictureHow.Size = new System.Drawing.Size(24, 25);
             this.pictureHow.TabIndex = 96;
             this.pictureHow.TabStop = false;
             this.pictureHow.Click += new System.EventHandler(this.pictureHow_Click);
@@ -115,7 +115,7 @@
             // picSetting
             // 
             this.picSetting.BackgroundImage = global::WordleXpert.Properties.Resources.Setting;
-            this.picSetting.Location = new System.Drawing.Point(23, 98);
+            this.picSetting.Location = new System.Drawing.Point(23, 106);
             this.picSetting.Name = "picSetting";
             this.picSetting.Size = new System.Drawing.Size(25, 26);
             this.picSetting.TabIndex = 97;
@@ -126,9 +126,9 @@
             // 
             this.btnM.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnM.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnM.Location = new System.Drawing.Point(511, 524);
+            this.btnM.Location = new System.Drawing.Point(511, 568);
             this.btnM.Name = "btnM";
-            this.btnM.Size = new System.Drawing.Size(41, 48);
+            this.btnM.Size = new System.Drawing.Size(41, 52);
             this.btnM.TabIndex = 123;
             this.btnM.Text = "M";
             this.btnM.UseVisualStyleBackColor = false;
@@ -138,9 +138,9 @@
             // 
             this.btnN.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnN.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnN.Location = new System.Drawing.Point(464, 524);
+            this.btnN.Location = new System.Drawing.Point(464, 568);
             this.btnN.Name = "btnN";
-            this.btnN.Size = new System.Drawing.Size(41, 48);
+            this.btnN.Size = new System.Drawing.Size(41, 52);
             this.btnN.TabIndex = 124;
             this.btnN.Text = "N";
             this.btnN.UseVisualStyleBackColor = false;
@@ -150,9 +150,9 @@
             // 
             this.btnB.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnB.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnB.Location = new System.Drawing.Point(417, 524);
+            this.btnB.Location = new System.Drawing.Point(417, 568);
             this.btnB.Name = "btnB";
-            this.btnB.Size = new System.Drawing.Size(41, 48);
+            this.btnB.Size = new System.Drawing.Size(41, 52);
             this.btnB.TabIndex = 125;
             this.btnB.Text = "B";
             this.btnB.UseVisualStyleBackColor = false;
@@ -162,9 +162,9 @@
             // 
             this.btnV.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnV.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnV.Location = new System.Drawing.Point(370, 524);
+            this.btnV.Location = new System.Drawing.Point(370, 568);
             this.btnV.Name = "btnV";
-            this.btnV.Size = new System.Drawing.Size(41, 48);
+            this.btnV.Size = new System.Drawing.Size(41, 52);
             this.btnV.TabIndex = 126;
             this.btnV.Text = "V";
             this.btnV.UseVisualStyleBackColor = false;
@@ -174,9 +174,9 @@
             // 
             this.btnC.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnC.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnC.Location = new System.Drawing.Point(321, 524);
+            this.btnC.Location = new System.Drawing.Point(321, 568);
             this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(41, 48);
+            this.btnC.Size = new System.Drawing.Size(41, 52);
             this.btnC.TabIndex = 118;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = false;
@@ -186,9 +186,9 @@
             // 
             this.btnX.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnX.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnX.Location = new System.Drawing.Point(274, 524);
+            this.btnX.Location = new System.Drawing.Point(274, 568);
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(41, 48);
+            this.btnX.Size = new System.Drawing.Size(41, 52);
             this.btnX.TabIndex = 119;
             this.btnX.Text = "X";
             this.btnX.UseVisualStyleBackColor = false;
@@ -198,9 +198,9 @@
             // 
             this.btnBS.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnBS.Font = new System.Drawing.Font("Sylfaen", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBS.Location = new System.Drawing.Point(555, 524);
+            this.btnBS.Location = new System.Drawing.Point(555, 568);
             this.btnBS.Name = "btnBS";
-            this.btnBS.Size = new System.Drawing.Size(66, 48);
+            this.btnBS.Size = new System.Drawing.Size(66, 52);
             this.btnBS.TabIndex = 122;
             this.btnBS.Text = "←";
             this.btnBS.UseVisualStyleBackColor = false;
@@ -210,9 +210,9 @@
             // 
             this.btnEnter.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnEnter.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnter.Location = new System.Drawing.Point(155, 524);
+            this.btnEnter.Location = new System.Drawing.Point(155, 568);
             this.btnEnter.Name = "btnEnter";
-            this.btnEnter.Size = new System.Drawing.Size(66, 48);
+            this.btnEnter.Size = new System.Drawing.Size(66, 52);
             this.btnEnter.TabIndex = 121;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = false;
@@ -222,9 +222,9 @@
             // 
             this.btnZ.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnZ.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnZ.Location = new System.Drawing.Point(227, 524);
+            this.btnZ.Location = new System.Drawing.Point(227, 568);
             this.btnZ.Name = "btnZ";
-            this.btnZ.Size = new System.Drawing.Size(41, 48);
+            this.btnZ.Size = new System.Drawing.Size(41, 52);
             this.btnZ.TabIndex = 120;
             this.btnZ.Text = "Z";
             this.btnZ.UseVisualStyleBackColor = false;
@@ -234,9 +234,9 @@
             // 
             this.btnL.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnL.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnL.Location = new System.Drawing.Point(558, 470);
+            this.btnL.Location = new System.Drawing.Point(558, 509);
             this.btnL.Name = "btnL";
-            this.btnL.Size = new System.Drawing.Size(41, 48);
+            this.btnL.Size = new System.Drawing.Size(41, 52);
             this.btnL.TabIndex = 112;
             this.btnL.Text = "L";
             this.btnL.UseVisualStyleBackColor = false;
@@ -246,9 +246,9 @@
             // 
             this.btnK.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnK.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnK.Location = new System.Drawing.Point(511, 470);
+            this.btnK.Location = new System.Drawing.Point(511, 509);
             this.btnK.Name = "btnK";
-            this.btnK.Size = new System.Drawing.Size(41, 48);
+            this.btnK.Size = new System.Drawing.Size(41, 52);
             this.btnK.TabIndex = 113;
             this.btnK.Text = "K";
             this.btnK.UseVisualStyleBackColor = false;
@@ -258,9 +258,9 @@
             // 
             this.btnJ.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnJ.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJ.Location = new System.Drawing.Point(464, 470);
+            this.btnJ.Location = new System.Drawing.Point(464, 509);
             this.btnJ.Name = "btnJ";
-            this.btnJ.Size = new System.Drawing.Size(41, 48);
+            this.btnJ.Size = new System.Drawing.Size(41, 52);
             this.btnJ.TabIndex = 114;
             this.btnJ.Text = "J";
             this.btnJ.UseVisualStyleBackColor = false;
@@ -270,9 +270,9 @@
             // 
             this.btnH.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnH.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnH.Location = new System.Drawing.Point(417, 470);
+            this.btnH.Location = new System.Drawing.Point(417, 509);
             this.btnH.Name = "btnH";
-            this.btnH.Size = new System.Drawing.Size(41, 48);
+            this.btnH.Size = new System.Drawing.Size(41, 52);
             this.btnH.TabIndex = 115;
             this.btnH.Text = "H";
             this.btnH.UseVisualStyleBackColor = false;
@@ -282,9 +282,9 @@
             // 
             this.btnG.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnG.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnG.Location = new System.Drawing.Point(370, 470);
+            this.btnG.Location = new System.Drawing.Point(370, 509);
             this.btnG.Name = "btnG";
-            this.btnG.Size = new System.Drawing.Size(41, 48);
+            this.btnG.Size = new System.Drawing.Size(41, 52);
             this.btnG.TabIndex = 116;
             this.btnG.Text = "G";
             this.btnG.UseVisualStyleBackColor = false;
@@ -294,9 +294,9 @@
             // 
             this.btnF.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnF.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnF.Location = new System.Drawing.Point(323, 470);
+            this.btnF.Location = new System.Drawing.Point(323, 509);
             this.btnF.Name = "btnF";
-            this.btnF.Size = new System.Drawing.Size(41, 48);
+            this.btnF.Size = new System.Drawing.Size(41, 52);
             this.btnF.TabIndex = 117;
             this.btnF.Text = "F";
             this.btnF.UseVisualStyleBackColor = false;
@@ -306,9 +306,9 @@
             // 
             this.btnD.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnD.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD.Location = new System.Drawing.Point(274, 470);
+            this.btnD.Location = new System.Drawing.Point(274, 509);
             this.btnD.Name = "btnD";
-            this.btnD.Size = new System.Drawing.Size(41, 48);
+            this.btnD.Size = new System.Drawing.Size(41, 52);
             this.btnD.TabIndex = 109;
             this.btnD.Text = "D";
             this.btnD.UseVisualStyleBackColor = false;
@@ -318,9 +318,9 @@
             // 
             this.btnS.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnS.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnS.Location = new System.Drawing.Point(227, 470);
+            this.btnS.Location = new System.Drawing.Point(227, 509);
             this.btnS.Name = "btnS";
-            this.btnS.Size = new System.Drawing.Size(41, 48);
+            this.btnS.Size = new System.Drawing.Size(41, 52);
             this.btnS.TabIndex = 110;
             this.btnS.Text = "S";
             this.btnS.UseVisualStyleBackColor = false;
@@ -330,9 +330,9 @@
             // 
             this.btnA.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnA.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnA.Location = new System.Drawing.Point(180, 470);
+            this.btnA.Location = new System.Drawing.Point(180, 509);
             this.btnA.Name = "btnA";
-            this.btnA.Size = new System.Drawing.Size(41, 48);
+            this.btnA.Size = new System.Drawing.Size(41, 52);
             this.btnA.TabIndex = 111;
             this.btnA.Text = "A";
             this.btnA.UseVisualStyleBackColor = false;
@@ -342,9 +342,9 @@
             // 
             this.btnP.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnP.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnP.Location = new System.Drawing.Point(580, 416);
+            this.btnP.Location = new System.Drawing.Point(580, 451);
             this.btnP.Name = "btnP";
-            this.btnP.Size = new System.Drawing.Size(41, 48);
+            this.btnP.Size = new System.Drawing.Size(41, 52);
             this.btnP.TabIndex = 104;
             this.btnP.Text = "P";
             this.btnP.UseVisualStyleBackColor = false;
@@ -354,9 +354,9 @@
             // 
             this.btnO.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnO.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnO.Location = new System.Drawing.Point(533, 416);
+            this.btnO.Location = new System.Drawing.Point(533, 451);
             this.btnO.Name = "btnO";
-            this.btnO.Size = new System.Drawing.Size(41, 48);
+            this.btnO.Size = new System.Drawing.Size(41, 52);
             this.btnO.TabIndex = 102;
             this.btnO.Text = "O";
             this.btnO.UseVisualStyleBackColor = false;
@@ -366,9 +366,9 @@
             // 
             this.btnI.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnI.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnI.Location = new System.Drawing.Point(486, 416);
+            this.btnI.Location = new System.Drawing.Point(486, 451);
             this.btnI.Name = "btnI";
-            this.btnI.Size = new System.Drawing.Size(41, 48);
+            this.btnI.Size = new System.Drawing.Size(41, 52);
             this.btnI.TabIndex = 103;
             this.btnI.Text = "I";
             this.btnI.UseVisualStyleBackColor = false;
@@ -378,9 +378,9 @@
             // 
             this.btnU.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnU.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnU.Location = new System.Drawing.Point(439, 416);
+            this.btnU.Location = new System.Drawing.Point(439, 451);
             this.btnU.Name = "btnU";
-            this.btnU.Size = new System.Drawing.Size(41, 48);
+            this.btnU.Size = new System.Drawing.Size(41, 52);
             this.btnU.TabIndex = 106;
             this.btnU.Text = "U";
             this.btnU.UseVisualStyleBackColor = false;
@@ -390,9 +390,9 @@
             // 
             this.btnY.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnY.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnY.Location = new System.Drawing.Point(392, 416);
+            this.btnY.Location = new System.Drawing.Point(392, 451);
             this.btnY.Name = "btnY";
-            this.btnY.Size = new System.Drawing.Size(41, 48);
+            this.btnY.Size = new System.Drawing.Size(41, 52);
             this.btnY.TabIndex = 105;
             this.btnY.Text = "Y";
             this.btnY.UseVisualStyleBackColor = false;
@@ -402,9 +402,9 @@
             // 
             this.btnT.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnT.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnT.Location = new System.Drawing.Point(345, 416);
+            this.btnT.Location = new System.Drawing.Point(345, 451);
             this.btnT.Name = "btnT";
-            this.btnT.Size = new System.Drawing.Size(41, 48);
+            this.btnT.Size = new System.Drawing.Size(41, 52);
             this.btnT.TabIndex = 107;
             this.btnT.Text = "T";
             this.btnT.UseVisualStyleBackColor = false;
@@ -414,9 +414,9 @@
             // 
             this.btnR.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnR.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnR.Location = new System.Drawing.Point(298, 416);
+            this.btnR.Location = new System.Drawing.Point(298, 451);
             this.btnR.Name = "btnR";
-            this.btnR.Size = new System.Drawing.Size(41, 48);
+            this.btnR.Size = new System.Drawing.Size(41, 52);
             this.btnR.TabIndex = 108;
             this.btnR.Text = "R";
             this.btnR.UseVisualStyleBackColor = false;
@@ -426,9 +426,9 @@
             // 
             this.btnE.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnE.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnE.Location = new System.Drawing.Point(249, 416);
+            this.btnE.Location = new System.Drawing.Point(249, 451);
             this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(41, 48);
+            this.btnE.Size = new System.Drawing.Size(41, 52);
             this.btnE.TabIndex = 100;
             this.btnE.Text = "E";
             this.btnE.UseVisualStyleBackColor = false;
@@ -438,9 +438,9 @@
             // 
             this.btnW.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnW.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnW.Location = new System.Drawing.Point(202, 416);
+            this.btnW.Location = new System.Drawing.Point(202, 451);
             this.btnW.Name = "btnW";
-            this.btnW.Size = new System.Drawing.Size(41, 48);
+            this.btnW.Size = new System.Drawing.Size(41, 52);
             this.btnW.TabIndex = 101;
             this.btnW.Text = "W";
             this.btnW.UseVisualStyleBackColor = false;
@@ -450,86 +450,86 @@
             // 
             this.btnQ.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnQ.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQ.Location = new System.Drawing.Point(155, 416);
+            this.btnQ.Location = new System.Drawing.Point(155, 451);
             this.btnQ.Name = "btnQ";
-            this.btnQ.Size = new System.Drawing.Size(41, 48);
+            this.btnQ.Size = new System.Drawing.Size(41, 52);
             this.btnQ.TabIndex = 99;
             this.btnQ.Text = "Q";
             this.btnQ.UseVisualStyleBackColor = false;
             this.btnQ.Click += new System.EventHandler(this.btn_OnScreen_Entered);
             // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.BackColor = System.Drawing.SystemColors.Window;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblUser.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblUser.Location = new System.Drawing.Point(559, 84);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(63, 24);
+            this.lblUser.TabIndex = 127;
+            this.lblUser.Text = "Guest";
+            // 
             // word6
             // 
             this.word6.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.word6.Location = new System.Drawing.Point(172, 353);
+            this.word6.Location = new System.Drawing.Point(172, 382);
             this.word6.Name = "word6";
-            this.word6.Size = new System.Drawing.Size(407, 35);
+            this.word6.Size = new System.Drawing.Size(407, 38);
             this.word6.TabIndex = 47;
             this.word6.WordEntered += new System.EventHandler(this.word6_WordEntered);
             // 
             // word5
             // 
             this.word5.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.word5.Location = new System.Drawing.Point(172, 312);
+            this.word5.Location = new System.Drawing.Point(172, 338);
             this.word5.Name = "word5";
-            this.word5.Size = new System.Drawing.Size(407, 35);
+            this.word5.Size = new System.Drawing.Size(407, 38);
             this.word5.TabIndex = 46;
             this.word5.WordEntered += new System.EventHandler(this.word_WordEntered);
             // 
             // word4
             // 
             this.word4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.word4.Location = new System.Drawing.Point(172, 272);
+            this.word4.Location = new System.Drawing.Point(172, 295);
             this.word4.Name = "word4";
-            this.word4.Size = new System.Drawing.Size(407, 35);
+            this.word4.Size = new System.Drawing.Size(407, 38);
             this.word4.TabIndex = 45;
             this.word4.WordEntered += new System.EventHandler(this.word_WordEntered);
             // 
             // word3
             // 
             this.word3.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.word3.Location = new System.Drawing.Point(172, 231);
+            this.word3.Location = new System.Drawing.Point(172, 250);
             this.word3.Name = "word3";
-            this.word3.Size = new System.Drawing.Size(407, 35);
+            this.word3.Size = new System.Drawing.Size(407, 38);
             this.word3.TabIndex = 44;
             this.word3.WordEntered += new System.EventHandler(this.word_WordEntered);
             // 
             // word2
             // 
             this.word2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.word2.Location = new System.Drawing.Point(172, 190);
+            this.word2.Location = new System.Drawing.Point(172, 206);
             this.word2.Name = "word2";
-            this.word2.Size = new System.Drawing.Size(407, 35);
+            this.word2.Size = new System.Drawing.Size(407, 38);
             this.word2.TabIndex = 43;
             this.word2.WordEntered += new System.EventHandler(this.word_WordEntered);
             // 
             // word1
             // 
             this.word1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.word1.Location = new System.Drawing.Point(172, 150);
+            this.word1.Location = new System.Drawing.Point(172, 162);
             this.word1.Name = "word1";
-            this.word1.Size = new System.Drawing.Size(407, 35);
+            this.word1.Size = new System.Drawing.Size(407, 38);
             this.word1.TabIndex = 42;
             this.word1.WordEntered += new System.EventHandler(this.word1_WordEntered);
             // 
-            // lblUser
-            // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.BackColor = System.Drawing.SystemColors.Window;
-            this.lblUser.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblUser.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblUser.Location = new System.Drawing.Point(559, 78);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(63, 24);
-            this.lblUser.TabIndex = 127;
-            this.lblUser.Text = "Guest";
-            // 
             // Form8Letters
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WordleXpert.Properties.Resources.Play_Background_8;
-            this.ClientSize = new System.Drawing.Size(787, 602);
+            this.ClientSize = new System.Drawing.Size(787, 652);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnM);
             this.Controls.Add(this.btnN);
@@ -570,6 +570,7 @@
             this.Controls.Add(this.word2);
             this.Controls.Add(this.word1);
             this.Controls.Add(this.txtAnswer);
+            this.DoubleBuffered = true;
             this.Name = "Form8Letters";
             this.Text = "WordleXpert";
             this.Load += new System.EventHandler(this.Form8Letters_Load);

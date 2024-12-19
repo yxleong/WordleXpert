@@ -38,9 +38,9 @@
             // lblRule
             // 
             this.lblRule.AutoSize = true;
-            this.lblRule.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblRule.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblRule.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblRule.Location = new System.Drawing.Point(12, 69);
+            this.lblRule.Location = new System.Drawing.Point(12, 75);
             this.lblRule.Name = "lblRule";
             this.lblRule.Size = new System.Drawing.Size(330, 252);
             this.lblRule.TabIndex = 15;
@@ -49,7 +49,7 @@
             // picTitle
             // 
             this.picTitle.BackgroundImage = global::WordleXpert.Properties.Resources.howToPlay_label;
-            this.picTitle.Location = new System.Drawing.Point(23, 30);
+            this.picTitle.Location = new System.Drawing.Point(23, 32);
             this.picTitle.Name = "picTitle";
             this.picTitle.Size = new System.Drawing.Size(196, 22);
             this.picTitle.TabIndex = 16;
@@ -58,10 +58,10 @@
             // buttonLan
             // 
             this.buttonLan.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.buttonLan.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.buttonLan.Location = new System.Drawing.Point(263, 25);
+            this.buttonLan.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.buttonLan.Location = new System.Drawing.Point(263, 27);
             this.buttonLan.Name = "buttonLan";
-            this.buttonLan.Size = new System.Drawing.Size(50, 30);
+            this.buttonLan.Size = new System.Drawing.Size(50, 32);
             this.buttonLan.TabIndex = 17;
             this.buttonLan.Text = "中";
             this.buttonLan.UseVisualStyleBackColor = false;
@@ -69,10 +69,10 @@
             // 
             // FormRules
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(348, 356);
+            this.ClientSize = new System.Drawing.Size(348, 386);
             this.Controls.Add(this.buttonLan);
             this.Controls.Add(this.picTitle);
             this.Controls.Add(this.lblRule);

@@ -47,7 +47,7 @@
             // pwdText
             // 
             this.pwdText.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.pwdText.Location = new System.Drawing.Point(161, 141);
+            this.pwdText.Location = new System.Drawing.Point(161, 140);
             this.pwdText.Name = "pwdText";
             this.pwdText.Size = new System.Drawing.Size(275, 29);
             this.pwdText.TabIndex = 5;
@@ -57,9 +57,9 @@
             // 
             this.btnLogin.BackgroundImage = global::WordleXpert.Properties.Resources.btn_Login;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnLogin.Location = new System.Drawing.Point(85, 200);
+            this.btnLogin.Location = new System.Drawing.Point(85, 217);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(109, 37);
+            this.btnLogin.Size = new System.Drawing.Size(109, 40);
             this.btnLogin.TabIndex = 9;
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -69,9 +69,9 @@
             this.btnReg.BackgroundImage = global::WordleXpert.Properties.Resources.btn_Register;
             this.btnReg.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnReg.Location = new System.Drawing.Point(259, 200);
+            this.btnReg.Location = new System.Drawing.Point(259, 217);
             this.btnReg.Name = "btnReg";
-            this.btnReg.Size = new System.Drawing.Size(109, 37);
+            this.btnReg.Size = new System.Drawing.Size(109, 40);
             this.btnReg.TabIndex = 10;
             this.btnReg.UseVisualStyleBackColor = true;
             this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
@@ -80,8 +80,8 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.BackColor = System.Drawing.Color.White;
-            this.lblLogin.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblLogin.Location = new System.Drawing.Point(92, 240);
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblLogin.Location = new System.Drawing.Point(174, 181);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(42, 16);
             this.lblLogin.TabIndex = 11;
@@ -91,19 +91,18 @@
             // 
             this.lblReg.AutoSize = true;
             this.lblReg.BackColor = System.Drawing.Color.White;
-            this.lblReg.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblReg.Location = new System.Drawing.Point(267, 240);
+            this.lblReg.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblReg.Location = new System.Drawing.Point(289, 260);
             this.lblReg.Name = "lblReg";
-            this.lblReg.Size = new System.Drawing.Size(42, 16);
+            this.lblReg.Size = new System.Drawing.Size(0, 16);
             this.lblReg.TabIndex = 11;
-            this.lblReg.Text = "label1";
             // 
             // FormAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WordleXpert.Properties.Resources.bg_Account;
-            this.ClientSize = new System.Drawing.Size(464, 283);
+            this.ClientSize = new System.Drawing.Size(464, 307);
             this.Controls.Add(this.lblReg);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.btnReg);
