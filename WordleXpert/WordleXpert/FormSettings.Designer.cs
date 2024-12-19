@@ -79,7 +79,7 @@
             // 
             // txtTest
             // 
-            this.txtTest.Location = new System.Drawing.Point(33, 287);
+            this.txtTest.Location = new System.Drawing.Point(33, 281);
             this.txtTest.Name = "txtTest";
             this.txtTest.Size = new System.Drawing.Size(389, 20);
             this.txtTest.TabIndex = 7;
@@ -108,7 +108,7 @@
             // picWord
             // 
             this.picWord.BackgroundImage = global::WordleXpert.Properties.Resources.wordLength_label;
-            this.picWord.Location = new System.Drawing.Point(33, 89);
+            this.picWord.Location = new System.Drawing.Point(30, 88);
             this.picWord.Name = "picWord";
             this.picWord.Size = new System.Drawing.Size(197, 22);
             this.picWord.TabIndex = 10;
@@ -117,7 +117,7 @@
             // picLanguage
             // 
             this.picLanguage.BackgroundImage = global::WordleXpert.Properties.Resources.language_label;
-            this.picLanguage.Location = new System.Drawing.Point(35, 35);
+            this.picLanguage.Location = new System.Drawing.Point(35, 36);
             this.picLanguage.Name = "picLanguage";
             this.picLanguage.Size = new System.Drawing.Size(141, 25);
             this.picLanguage.TabIndex = 10;
@@ -126,7 +126,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::WordleXpert.Properties.Resources.hdMode_label;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 148);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 142);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(161, 25);
             this.pictureBox1.TabIndex = 10;
@@ -135,7 +135,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = global::WordleXpert.Properties.Resources.dark_label;
-            this.pictureBox3.Location = new System.Drawing.Point(35, 196);
+            this.pictureBox3.Location = new System.Drawing.Point(33, 190);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(168, 26);
             this.pictureBox3.TabIndex = 10;
@@ -145,7 +145,7 @@
             // 
             this.checkBoxHD.AutoSize = true;
             this.checkBoxHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBoxHD.Location = new System.Drawing.Point(403, 152);
+            this.checkBoxHD.Location = new System.Drawing.Point(403, 142);
             this.checkBoxHD.Name = "checkBoxHD";
             this.checkBoxHD.Size = new System.Drawing.Size(15, 14);
             this.checkBoxHD.TabIndex = 11;
@@ -156,7 +156,7 @@
             // 
             this.checkBoxTheme.AutoSize = true;
             this.checkBoxTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBoxTheme.Location = new System.Drawing.Point(403, 203);
+            this.checkBoxTheme.Location = new System.Drawing.Point(403, 190);
             this.checkBoxTheme.Name = "checkBoxTheme";
             this.checkBoxTheme.Size = new System.Drawing.Size(15, 14);
             this.checkBoxTheme.TabIndex = 11;
@@ -166,7 +166,7 @@
             // pictureBoxDebug
             // 
             this.pictureBoxDebug.BackgroundImage = global::WordleXpert.Properties.Resources.debug_label;
-            this.pictureBoxDebug.Location = new System.Drawing.Point(35, 246);
+            this.pictureBoxDebug.Location = new System.Drawing.Point(34, 233);
             this.pictureBoxDebug.Name = "pictureBoxDebug";
             this.pictureBoxDebug.Size = new System.Drawing.Size(174, 21);
             this.pictureBoxDebug.TabIndex = 10;
@@ -176,7 +176,7 @@
             // 
             this.checkBoxDebug.AutoSize = true;
             this.checkBoxDebug.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.checkBoxDebug.Location = new System.Drawing.Point(403, 250);
+            this.checkBoxDebug.Location = new System.Drawing.Point(403, 233);
             this.checkBoxDebug.Name = "checkBoxDebug";
             this.checkBoxDebug.Size = new System.Drawing.Size(15, 14);
             this.checkBoxDebug.TabIndex = 11;
@@ -186,7 +186,7 @@
             // lblHardModeInfo
             // 
             this.lblHardModeInfo.AutoSize = true;
-            this.lblHardModeInfo.Location = new System.Drawing.Point(35, 177);
+            this.lblHardModeInfo.Location = new System.Drawing.Point(32, 170);
             this.lblHardModeInfo.Name = "lblHardModeInfo";
             this.lblHardModeInfo.Size = new System.Drawing.Size(262, 13);
             this.lblHardModeInfo.TabIndex = 12;
