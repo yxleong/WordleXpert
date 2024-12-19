@@ -110,7 +110,7 @@
             this.picWord.BackgroundImage = global::WordleXpert.Properties.Resources.wordLength_label;
             this.picWord.Location = new System.Drawing.Point(33, 89);
             this.picWord.Name = "picWord";
-            this.picWord.Size = new System.Drawing.Size(197, 24);
+            this.picWord.Size = new System.Drawing.Size(197, 22);
             this.picWord.TabIndex = 10;
             this.picWord.TabStop = false;
             // 
@@ -119,7 +119,7 @@
             this.picLanguage.BackgroundImage = global::WordleXpert.Properties.Resources.language_label;
             this.picLanguage.Location = new System.Drawing.Point(35, 35);
             this.picLanguage.Name = "picLanguage";
-            this.picLanguage.Size = new System.Drawing.Size(141, 27);
+            this.picLanguage.Size = new System.Drawing.Size(141, 25);
             this.picLanguage.TabIndex = 10;
             this.picLanguage.TabStop = false;
             // 
@@ -168,7 +168,7 @@
             this.pictureBoxDebug.BackgroundImage = global::WordleXpert.Properties.Resources.debug_label;
             this.pictureBoxDebug.Location = new System.Drawing.Point(35, 246);
             this.pictureBoxDebug.Name = "pictureBoxDebug";
-            this.pictureBoxDebug.Size = new System.Drawing.Size(174, 23);
+            this.pictureBoxDebug.Size = new System.Drawing.Size(174, 21);
             this.pictureBoxDebug.TabIndex = 10;
             this.pictureBoxDebug.TabStop = false;
             // 

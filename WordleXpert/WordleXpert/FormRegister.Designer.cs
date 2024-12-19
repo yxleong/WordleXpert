@@ -64,7 +64,7 @@
             // buttonRegister
             // 
             this.buttonRegister.BackgroundImage = global::WordleXpert.Properties.Resources.btn_Register;
-            this.buttonRegister.Location = new System.Drawing.Point(160, 224);
+            this.buttonRegister.Location = new System.Drawing.Point(160, 223);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(106, 40);
             this.buttonRegister.TabIndex = 1;
@@ -76,7 +76,7 @@
             this.lblReg.AutoSize = true;
             this.lblReg.BackColor = System.Drawing.SystemColors.Window;
             this.lblReg.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblReg.Location = new System.Drawing.Point(164, 271);
+            this.lblReg.Location = new System.Drawing.Point(160, 268);
             this.lblReg.Name = "lblReg";
             this.lblReg.Size = new System.Drawing.Size(42, 16);
             this.lblReg.TabIndex = 2;
