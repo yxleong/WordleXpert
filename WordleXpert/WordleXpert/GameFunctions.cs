@@ -44,6 +44,9 @@ namespace WordleXpert
             // total games played, win percentage
 
             // display window
+            Program.TotalGamesPlayed++;
+            Program.WinPercentage = (double)Program.TotalWins / Program.TotalGamesPlayed * 100;
+            Program.SaveUserStats();
             using (var formLose = new FormLose(answer))
             {
                 formLose.StartPosition = FormStartPosition.CenterParent;
