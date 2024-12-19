@@ -76,7 +76,7 @@
             this.lblReg.AutoSize = true;
             this.lblReg.BackColor = System.Drawing.SystemColors.Window;
             this.lblReg.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblReg.Location = new System.Drawing.Point(160, 268);
+            this.lblReg.Location = new System.Drawing.Point(272, 236);
             this.lblReg.Name = "lblReg";
             this.lblReg.Size = new System.Drawing.Size(42, 16);
             this.lblReg.TabIndex = 2;

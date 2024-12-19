@@ -50,7 +50,7 @@ namespace WordleXpert
 
             if (!pwd.Equals(pwd2))
             {
-                lblReg.Text = "Passwords do not match. Please try again.";
+                lblReg.Text = "Passwords do not match!";
                 lblReg.Visible = true;
                 return;
             }

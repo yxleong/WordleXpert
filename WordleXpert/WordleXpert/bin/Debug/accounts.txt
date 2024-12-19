@@ -3,3 +3,5 @@
 abc|abc
 abcs|abc
 sadas|asdasd
+abcS|ABC
+abcsa|abc
