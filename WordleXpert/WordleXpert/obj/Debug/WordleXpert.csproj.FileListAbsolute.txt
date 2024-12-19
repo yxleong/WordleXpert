@@ -260,3 +260,11 @@ D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\img\wordLength_label.png
 D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\img\_format.png
 D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\img\_format2.png
 D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\img\_format3.png
+D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\word_list\english_5.txt
+D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\word_list\english_6.txt
+D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\word_list\english_7.txt
+D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\word_list\english_8.txt
+D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\word_list\melayu_5.txt
+D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\word_list\melayu_6.txt
+D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\word_list\melayu_7.txt
+D:\repos\WordleXpert\WordleXpert\WordleXpert\bin\Debug\word_list\melayu_8.txt
