@@ -20,7 +20,11 @@ An advanced version of the classic Wordle game with enhanced features and custom
 - **Debug Mode**: Displays the correct answer directly on the playing screen for testing and troubleshooting purposes.
 
 ## **Gameplay Screenshots**  
-![image](https://github.com/user-attachments/assets/f47d2e4c-6178-4ca0-afd1-ddd65a776d1d)
+![main-menu](https://github.com/user-attachments/assets/f47d2e4c-6178-4ca0-afd1-ddd65a776d1d)
+
+![playing](https://github.com/user-attachments/assets/9bf3425b-6b3e-4bc2-bb3d-8e145bd729be)
+
+[Canva for presentation](https://www.canva.com/design/DAGZvqqtM30/UEpQtmF0lqrw9XNpKM6NiQ/view)
 
 ## **Installation**
 1. Clone this repository:
