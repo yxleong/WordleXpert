@@ -45,4 +45,4 @@ An advanced version of the classic Wordle game with enhanced features and custom
 Contributions are welcome! Please fork the repository and create a pull request for review.
 
 ## **License**
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
